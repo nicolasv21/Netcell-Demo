@@ -24,8 +24,8 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ReportDataSource5 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.loglist = New System.Windows.Forms.ListBox()
         Me.fail = New System.Windows.Forms.Panel()
         Me.Label55 = New System.Windows.Forms.Label()
@@ -250,6 +250,8 @@ Partial Class Form1
         Me.lbl_footer_1 = New System.Windows.Forms.Label()
         Me.lbl_footer_2 = New System.Windows.Forms.Label()
         Me.cedulasTableAdapter = New Netcell_Demo_v._4.CedulasDBDataSetTableAdapters.cedulasTableAdapter()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.fail.SuspendLayout()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Datos.SuspendLayout()
@@ -1762,9 +1764,9 @@ Partial Class Form1
         'ReportViewer1
         '
         Me.ReportViewer1.DocumentMapWidth = 71
-        ReportDataSource2.Name = "DataSet1"
-        ReportDataSource2.Value = Nothing
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
+        ReportDataSource5.Name = "DataSet1"
+        ReportDataSource5.Value = Nothing
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource5)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Netcell_Demo_v._4.Report1.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(50, 29)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -1941,6 +1943,7 @@ Partial Class Form1
         '
         'imprimir
         '
+        Me.imprimir.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.imprimir.Controls.Add(Me.Panel2)
         Me.imprimir.Controls.Add(Me.Panel1)
         Me.imprimir.Location = New System.Drawing.Point(52, 89)
@@ -1951,6 +1954,7 @@ Partial Class Form1
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.Controls.Add(Me.DataGridView1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 72)
@@ -1965,19 +1969,19 @@ Partial Class Form1
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AllowUserToOrderColumns = True
         Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.NacionalidadDataGridViewTextBoxColumn, Me.SexoDataGridViewTextBoxColumn, Me.LugarnacimientoDataGridViewTextBoxColumn, Me.FechanacimientoDataGridViewTextBoxColumn, Me.ProfesionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.FechaexpiracionDataGridViewTextBoxColumn, Me.NumeroplasticoDataGridViewTextBoxColumn, Me.NumerochipDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.BindingSource1
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(10, 0)
         Me.DataGridView1.Name = "DataGridView1"
@@ -2103,6 +2107,7 @@ Partial Class Form1
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.Button6)
         Me.Panel1.Controls.Add(Me.Button5)
         Me.Panel1.Controls.Add(Me.Label80)
@@ -2201,7 +2206,8 @@ Partial Class Form1
         '
         'SplitContainer1.Panel1
         '
-        Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Button7)
         Me.SplitContainer1.Panel1.Controls.Add(Me.txt_numero_chip)
         Me.SplitContainer1.Panel1.Controls.Add(Me.txt_numero_plastico)
         Me.SplitContainer1.Panel1.Controls.Add(Me.txt_fecha_expiracion)
@@ -2495,7 +2501,7 @@ Partial Class Form1
         Me.Label68.AutoSize = True
         Me.Label68.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label68.ForeColor = System.Drawing.Color.DimGray
-        Me.Label68.Location = New System.Drawing.Point(0, 0)
+        Me.Label68.Location = New System.Drawing.Point(68, 43)
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(93, 13)
         Me.Label68.TabIndex = 62
@@ -2665,6 +2671,7 @@ Partial Class Form1
         '
         'Panel8
         '
+        Me.Panel8.Controls.Add(Me.Button4)
         Me.Panel8.Controls.Add(Me.PictureBox17)
         Me.Panel8.Controls.Add(Me.Panel7)
         Me.Panel8.Controls.Add(Me.PictureBox16)
@@ -2960,6 +2967,31 @@ Partial Class Form1
         '
         Me.cedulasTableAdapter.ClearBeforeFill = True
         '
+        'Button4
+        '
+        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(225, 4)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(21, 22)
+        Me.Button4.TabIndex = 59
+        Me.Button4.Text = "X"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.ForeColor = System.Drawing.Color.White
+        Me.Button7.Location = New System.Drawing.Point(224, 5)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(21, 22)
+        Me.Button7.TabIndex = 75
+        Me.Button7.Text = "X"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2972,6 +3004,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Footer)
         Me.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Netcell  ID v.4"
@@ -3291,5 +3324,7 @@ Partial Class Form1
     Friend WithEvents txt_nombres As System.Windows.Forms.TextBox
     Friend WithEvents txt_cedula As System.Windows.Forms.TextBox
     Friend WithEvents Label81 As System.Windows.Forms.Label
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button7 As System.Windows.Forms.Button
 
 End Class

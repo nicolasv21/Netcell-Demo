@@ -11,7 +11,7 @@ Public Class Form1
     Dim CONNECTION_STR As String = "Data Source=c:\Netcell\DB\CedulasDB.db;Version=3;"
     Private PersonalData As PersonalData = Nothing
     Dim ventana_regresar As Panel
-    Dim ventana_actual As String
+    Dim ventana_actual As Panel
     Dim personalID As String = String.Empty
     Private start_time As DateTime
     Private stop_time As DateTime
@@ -88,7 +88,7 @@ Public Class Form1
             btn_1.Text = btn1_text
             btn_1.Visible = True
         End If
-       
+
         If btn3 = True Then
             btn_3.Text = btn3_text
             btn_3.Visible = True
@@ -100,18 +100,23 @@ Public Class Form1
         Return True
     End Function
 
-    Private Function abrir(ByRef Ventana As Panel)
-        If ventana_actual <> Ventana.Name Or ventana_actual <> "Lectura" Then
-            Lectura.Visible = False  ' Ventana de leyendo chip.
-            Header.Visible = False   ' Ventana de solicitud de cedula en el lector.
-            id_file.Visible = False  ' Ventana de solicitud de ID FILE.
-            Error_1.Visible = False  ' Ventana de error de conexion del lector de cédulas.
-            Datos.Visible = False    ' Ventana que muestra todos los datos del chip.
-            fail.Visible = False     ' Ventana de error de chip id.
-            Report.Visible = False     ' Ventana de Reporte.
-            Ventana.Visible = True
+    Private Function abrir(Optional ByRef Ventana As Panel = Nothing)
+        Lectura.Visible = False  ' Ventana de leyendo chip.
+        Header.Visible = False   ' Ventana de solicitud de cedula en el lector.
+        id_file.Visible = False  ' Ventana de solicitud de ID FILE.
+        Error_1.Visible = False  ' Ventana de error de conexion del lector de cédulas.
+        Datos.Visible = False    ' Ventana que muestra todos los datos del chip.
+        fail.Visible = False     ' Ventana de error de chip id.
+        Report.Visible = False     ' Ventana de Reporte.
+        imprimir.Visible = False
+
+        ventana_regresar = ventana_actual
+
+        Ventana.Visible = True
+
+        If ventana_actual.Name <> Ventana.Name Or ventana_actual.Name <> "Lectura" Then
+
             Ventana.Dock = DockStyle.Fill
-            ventana_actual = Ventana.Name
             If Ventana.Name = "Error_1" Then
                 botones(True, "ACTIVAR", True, "CERRAR")
                 lbl_footer_1.Visible = False
@@ -123,6 +128,8 @@ Public Class Form1
                 Me.lbl_footer_2.Text = "TIEMPO APROXIMADO DE LECTURA"
                 lbl_footer_1.Visible = True
                 lbl_footer_2.Visible = True
+                SplitContainer1.Panel1Collapsed = True
+                SplitContainer1.Panel2Collapsed = False
             End If
             If Ventana.Name = "Lectura" Then
                 botones()
@@ -144,39 +151,38 @@ Public Class Form1
             End If
             If Ventana.Name = "fail" Then
                 botones(True, "LEER CEDULA", True, "REGRESAR", True, "CERRAR")
-                ventana_regresar = Header
                 lbl_footer_1.Visible = False
                 lbl_footer_2.Visible = False
             End If
             If Ventana.Name = "id_file" Then
                 botones(True, "LEER CEDULA", True, "REGRESAR", True, "CERRAR")
-                ventana_regresar = Header
                 lbl_footer_1.Visible = False
                 lbl_footer_2.Visible = False
             End If
             If Ventana.Name = "Report" Then
                 botones(True, "REGRESAR", True, "CERRAR")
-                ventana_regresar = Datos
                 lbl_footer_1.Visible = False
                 lbl_footer_2.Visible = False
             End If
             If Ventana.Name = "imprimir" Then
                 botones(True, "REGRESAR", True, "CERRAR")
-                ventana_regresar = Datos
                 lbl_footer_1.Visible = False
                 lbl_footer_2.Visible = False
             End If
             Return True
+            ventana_actual = Ventana
         End If
         Return False
+      
+
     End Function
     Private Function activar_lector()
         Dim message As String = String.Empty
         If Not Me.OtiIcao1.ActivateReaders(message) Then
-            abrir(Me.Error_1)
+            abrir(Error_1)
             Return False
         Else
-            abrir(Me.Header)
+            abrir(Header)
             AddHandler Me.OtiIcao1.OnFileStartProcess, New FileStartProcessEventHandler(AddressOf Me.otiIcao1_OnFileStartProcess)
             AddHandler Me.OtiIcao1.OnFileBlockProcessed, New FileBlockProcessedEventHandler(AddressOf Me.otiIcao1_OnFileBlockProcessed)
             Return True
@@ -184,7 +190,7 @@ Public Class Form1
     End Function
     Private Function leer_chip()
         If verificar_validez() Then
-            
+
             personalID = personal_id.Text
             Dim cantidad As Integer
             Dim op1, op2, op3 As Short
@@ -267,80 +273,102 @@ Public Class Form1
                 Me.btn_4.Enabled = True
                 abrir(Datos)
 
-               
-                    If (icaoAuthentityResult <> icaoAuthentityResult.PassedAll) Then
-                        ' MessageBox.Show(messageText)
-                        certificado.Visible = True
-                        certificado_txt.Visible = True
-                    Else
-                        certificado.Visible = True
-                        certificado_txt.Visible = True
-                    End If
-                    If firstFingerIcaoIndex = 1 Or firstFingerIcaoIndex = 3 Or firstFingerIcaoIndex = 5 Or firstFingerIcaoIndex = 7 Or firstFingerIcaoIndex = 9 Then
-                        d_mano.Text = "Mano Derecha"
-                    Else
-                        d_mano.Text = "Mano Izquierda"
-                    End If
-                    If firstFingerIcaoIndex = 1 Then
-                        d_dedo.Image = Netcell_Demo_v._4.My.Resources.d1
-                    End If
-                    If firstFingerIcaoIndex = 2 Then
-                        d_dedo.Image = Netcell_Demo_v._4.My.Resources.d2
-                    End If
-                    If firstFingerIcaoIndex = 3 Then
-                        d_dedo.Image = Netcell_Demo_v._4.My.Resources.d3
-                    End If
-                    If firstFingerIcaoIndex = 4 Then
-                        d_dedo.Image = Netcell_Demo_v._4.My.Resources.d4
-                    End If
-                    If firstFingerIcaoIndex = 5 Then
-                        d_dedo.Image = Netcell_Demo_v._4.My.Resources.d5
-                    End If
-                    If firstFingerIcaoIndex = 6 Then
-                        d_dedo.Image = Netcell_Demo_v._4.My.Resources.d6
-                    End If
-                    If firstFingerIcaoIndex = 7 Then
-                        d_dedo.Image = Netcell_Demo_v._4.My.Resources.d7
-                    End If
-                    If firstFingerIcaoIndex = 8 Then
-                        d_dedo.Image = Netcell_Demo_v._4.My.Resources.d8
-                    End If
-                    If firstFingerIcaoIndex = 9 Then
-                        d_dedo.Image = Netcell_Demo_v._4.My.Resources.d9
-                    End If
-                    If firstFingerIcaoIndex = 10 Then
-                        d_dedo.Image = Netcell_Demo_v._4.My.Resources.d10
-                    End If
-                    Me.d_nombres.Text = firstName
-                    Me.d_apellidos.Text = lastName
-                    Me.d_nacionalidad.Text = nationality
-                    Me.d_fecha_nac.Text = dateOfBirth
-                    Me.d_sexo.Text = sex
-                    Me.d_numero_plastico.Text = documentNumber
-                    Me.d_cedula.Text = personalID_11
-                    Me.d_fecha_expiracion.Text = validUntil
-                    Me.d_lugar_nac.Text = placeOfBirth
-                    Me.d_telefono.Text = telephone
-                    Me.d_profesion.Text = profession
-                    Me.d_direccion.Text = address
-                    Me.d_numero_chip.Text = BitConverter.ToString(chipId)
 
-                    If Not photo Is Nothing Then
-                        Using ms = New MemoryStream(photo, 0, photo.Length)
-                            ms.Write(photo, 0, photo.Length)
-                            Me.d_foto.Image = Image.FromStream(ms, True)
-                        End Using
-                    End If
+                If (icaoAuthentityResult <> icaoAuthentityResult.PassedAll) Then
+                    ' MessageBox.Show(messageText)
+                    certificado.Visible = True
+                    certificado_txt.Visible = True
+                Else
+                    certificado.Visible = True
+                    certificado_txt.Visible = True
+                End If
+                If firstFingerIcaoIndex = 1 Or firstFingerIcaoIndex = 3 Or firstFingerIcaoIndex = 5 Or firstFingerIcaoIndex = 7 Or firstFingerIcaoIndex = 9 Then
+                    d_mano.Text = "Mano Derecha"
+                Else
+                    d_mano.Text = "Mano Izquierda"
+                End If
+                If firstFingerIcaoIndex = 1 Then
+                    d_dedo.Image = Netcell_Demo_v._4.My.Resources.d1
+                End If
+                If firstFingerIcaoIndex = 2 Then
+                    d_dedo.Image = Netcell_Demo_v._4.My.Resources.d2
+                End If
+                If firstFingerIcaoIndex = 3 Then
+                    d_dedo.Image = Netcell_Demo_v._4.My.Resources.d3
+                End If
+                If firstFingerIcaoIndex = 4 Then
+                    d_dedo.Image = Netcell_Demo_v._4.My.Resources.d4
+                End If
+                If firstFingerIcaoIndex = 5 Then
+                    d_dedo.Image = Netcell_Demo_v._4.My.Resources.d5
+                End If
+                If firstFingerIcaoIndex = 6 Then
+                    d_dedo.Image = Netcell_Demo_v._4.My.Resources.d6
+                End If
+                If firstFingerIcaoIndex = 7 Then
+                    d_dedo.Image = Netcell_Demo_v._4.My.Resources.d7
+                End If
+                If firstFingerIcaoIndex = 8 Then
+                    d_dedo.Image = Netcell_Demo_v._4.My.Resources.d8
+                End If
+                If firstFingerIcaoIndex = 9 Then
+                    d_dedo.Image = Netcell_Demo_v._4.My.Resources.d9
+                End If
+                If firstFingerIcaoIndex = 10 Then
+                    d_dedo.Image = Netcell_Demo_v._4.My.Resources.d10
+                End If
+                Me.d_nombres.Text = firstName
+                Me.d_apellidos.Text = lastName
+                Me.d_nacionalidad.Text = nationality
+                Me.d_fecha_nac.Text = dateOfBirth
+                Me.d_sexo.Text = sex
+                Me.d_numero_plastico.Text = documentNumber
+                Me.d_cedula.Text = personalID_11
+                Me.d_fecha_expiracion.Text = validUntil
+                Me.d_lugar_nac.Text = placeOfBirth
+                Me.d_telefono.Text = telephone
+                Me.d_profesion.Text = profession
+                Me.d_direccion.Text = address
+                Me.d_numero_chip.Text = BitConverter.ToString(chipId)
 
-                    If Not signature Is Nothing Then
-                        Using ms As New MemoryStream(signature, 0, signature.Length)
-                            ms.Write(signature, 0, signature.Length)
-                            Me.d_firma.Image = Image.FromStream(ms, True)
-                        End Using
+                If Not photo Is Nothing Then
+                    Using ms = New MemoryStream(photo, 0, photo.Length)
+                        ms.Write(photo, 0, photo.Length)
+                        Me.d_foto.Image = Image.FromStream(ms, True)
+                    End Using
+                End If
+
+                If Not signature Is Nothing Then
+                    Using ms As New MemoryStream(signature, 0, signature.Length)
+                        ms.Write(signature, 0, signature.Length)
+                        Me.d_firma.Image = Image.FromStream(ms, True)
+                    End Using
+                End If
+                If (Not fingerIcao Is Nothing) Then
+                    hbitmap = WSQ_library_native_methods.CreateBMPFromWSQByteArray(fingerIcao, fingerIcao.Length)
+                    Me.d_huella.Image = Bitmap.FromHbitmap(hbitmap)
+                    Dim image2 As Image = Me.d_huella.Image
+                    image2.Save("c:\NETCELL\huella.bmp", System.Drawing.Imaging.ImageFormat.Bmp)
+                    extraer = True
+                    iden = False
+                    Dim resolution As Integer
+                    resolution = 500
+                    If (resolution <> 0) Then
+                        If AxGrFingerXCtrl1.CapLoadImageFromFile("c:\NETCELL\huella.bmp", resolution) <> GRConstants.GR_OK Then
+                            ' myUtil.WriteLog("Fail to load the file.")
+                        End If
                     End If
-                    If (Not fingerIcao Is Nothing) Then
-                        hbitmap = WSQ_library_native_methods.CreateBMPFromWSQByteArray(fingerIcao, fingerIcao.Length)
+                    myUtil.DB.clearDB()
+                    Me.Timer1.Enabled = True
+                Else
+                    Try
+                        Dim input As New FileStream("C:\Netcell\Working\blob_2_PersData.bin", FileMode.Open)
+                        Dim reader As New BinaryReader(input)
+
+                        huellagemalto = reader.ReadBytes(CInt(input.Length))
+                        hbitmap = WSQ_library_native_methods.CreateBMPFromWSQByteArray(huellagemalto, huellagemalto.Length)
                         Me.d_huella.Image = Bitmap.FromHbitmap(hbitmap)
+                        input.Close()
                         Dim image2 As Image = Me.d_huella.Image
                         image2.Save("c:\NETCELL\huella.bmp", System.Drawing.Imaging.ImageFormat.Bmp)
                         extraer = True
@@ -354,38 +382,16 @@ Public Class Form1
                         End If
                         myUtil.DB.clearDB()
                         Me.Timer1.Enabled = True
-                    Else
-                        Try
-                            Dim input As New FileStream("C:\Netcell\Working\blob_2_PersData.bin", FileMode.Open)
-                            Dim reader As New BinaryReader(input)
+                    Catch ex As Exception
 
-                            huellagemalto = reader.ReadBytes(CInt(input.Length))
-                            hbitmap = WSQ_library_native_methods.CreateBMPFromWSQByteArray(huellagemalto, huellagemalto.Length)
-                            Me.d_huella.Image = Bitmap.FromHbitmap(hbitmap)
-                            input.Close()
-                            Dim image2 As Image = Me.d_huella.Image
-                            image2.Save("c:\NETCELL\huella.bmp", System.Drawing.Imaging.ImageFormat.Bmp)
-                            extraer = True
-                            iden = False
-                            Dim resolution As Integer
-                            resolution = 500
-                            If (resolution <> 0) Then
-                                If AxGrFingerXCtrl1.CapLoadImageFromFile("c:\NETCELL\huella.bmp", resolution) <> GRConstants.GR_OK Then
-                                    ' myUtil.WriteLog("Fail to load the file.")
-                                End If
-                            End If
-                            myUtil.DB.clearDB()
-                            Me.Timer1.Enabled = True
-                        Catch ex As Exception
+                    End Try
 
-                        End Try
-
-                    End If
+                End If
 
 
 
-                    'Me.btn_4.Enabled = True
-                    ' abrir(Datos)
+                'Me.btn_4.Enabled = True
+                ' abrir(Datos)
 
             Catch ex As Exception
 
@@ -404,18 +410,18 @@ Public Class Form1
         End If
         If Not Me.OtiIcao1.ReadChipId(personalID, chipLocked, chipId, messageText) Then
             If messageText = "OTI Saturn reader communication service: OTI_SATURN_CANNOT_FIND_CARD (C0000002)" & vbCrLf & "Cannot find card." Then
-                abrir(Me.fail)
+                abrir(fail)
                 Return False
             End If
             If messageText = "OTI Saturn reader communication service: OTI_SATURN_CANNOT_FIND_READER (C0000000)" & vbCrLf & "Cannot find OTI Saturn reader." Then
-                abrir(Me.Error_1)
+                abrir(Error_1)
                 Return False
             End If
             If messageText = "OTI ECUID PICC processor service: OTI_TLVAPDU_APPLICATION_ERROR (FFFFFFFF)" & vbCrLf & "La matriz de origen no es suficientemente larga. Compruebe srcIndex, la longitud y los límites inferiores de la matriz." Then
                 Return True
             End If
             If messageText = "APDU TLV files processor service: OTI_TLVAPDU_ICAO_ERROR_CANNOT_OPEN_SEC_CHNL (C0000003)" & vbCrLf & "Cannot open secure channel: APDU [BAC Mutual Authentication] Wrong response: 6300." Then
-                abrir(Me.id_file)
+                abrir(id_file)
                 id_file_error.Text = "El número de cédula no coincide."
                 id_file_error.Visible = True
                 Return False
@@ -441,11 +447,11 @@ Public Class Form1
         End If
     End Function
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
-          'TODO: This line of code loads data into the 'CedulasDBDataSet.cedulas' table. You can move, or remove it, as needed.
+        'TODO: This line of code loads data into the 'CedulasDBDataSet.cedulas' table. You can move, or remove it, as needed.
         Me.cedulasTableAdapter.Fill(Me.CedulasDBDataSet.cedulas)
         'TODO: This line of code loads data into the 'CedulasDBDataSet.cedulas' table. You can move, or remove it, as needed.
-      
 
+        ventana_actual = Header
         activar_lector()
         activar_biometrico()
         Me.ReportViewer1.RefreshReport()
@@ -463,14 +469,14 @@ Public Class Form1
             Exit Sub
         End If
         If btn_1.Text = "LEER CEDULA" Then
-            
+
         End If
     End Sub
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        
-       
 
-       
+
+
+
     End Sub
     Private Sub btn_3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If btn_3.Text = "CERRAR" Then
@@ -478,10 +484,10 @@ Public Class Form1
             Application.Exit()
         End If
         If btn_3.Text = "REGRESAR" Then
-            If ventana_actual = "Datos" Then
-                abrir(Me.Header)
+            If ventana_actual.Name = "Datos" Then
+                abrir(Header)
             Else
-                abrir(Me.ventana_regresar)
+                ' abrir(Me.ventana_regresar)
             End If
         End If
 
@@ -640,7 +646,7 @@ Public Class Form1
 
             objCommand.CommandText = "INSERT INTO cedulas (cedula, nombres , apellidos,nacionalidad,sexo,lugar_nacimiento,fecha_nacimiento,profesion,telefono,direccion,fecha_expiracion,numero_plastico,numero_chip,foto,firma,huella) VALUES ('" & d_cedula.Text & "','" & d_nombres.Text & "','" & d_apellidos.Text & "','" & d_nacionalidad.Text & "','" & d_sexo.Text & "','" & d_lugar_nac.Text & "','" & d_fecha_nac.Text & "','" & d_profesion.Text & "','" & d_telefono.Text & "','" & d_direccion.Text & "','" & d_fecha_expiracion.Text & "','" & d_numero_plastico.Text & "','" & d_numero_chip.Text & "',@photo,@firma,@huella);"
             objCommand.Parameters.Add("@photo", DbType.Binary, 20).Value = photo
-           
+
             If (huellagemalto.Length > 0) Then
                 objCommand.Parameters.Add("@huella", DbType.Binary, 20).Value = huellagemalto
             Else
@@ -759,11 +765,11 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click_5(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        abrir(Me.imprimir)
+        abrir(imprimir)
     End Sub
 
     Private Sub Button2_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        abrir(Me.Report)
+        abrir(Report)
     End Sub
 
     Private Sub btn_4_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_4.Click
@@ -775,17 +781,17 @@ Public Class Form1
     End Sub
 
     Private Sub btn_1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_1.Click
-        If ventana_actual = "id_file" Then
+        If ventana_actual.Name = "id_file" Then
             If personal_id.Text.Length < 10 Then
                 id_file_error.Text = "El número de cédula no tiene 10 caracteres"
                 id_file_error.Visible = True
             Else
                 id_file_error.Visible = False
-                abrir(Me.Lectura)
+                abrir(Lectura)
             End If
             Exit Sub
         End If
-        abrir(Me.Lectura)
+        abrir(Lectura)
         Exit Sub
     End Sub
 
@@ -803,6 +809,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button5_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        Derecha.Visible = True
         If SplitContainer1.Panel1Collapsed = False Then
             SplitContainer1.Panel1Collapsed = True
             SplitContainer1.Panel2Collapsed = False
@@ -970,7 +977,6 @@ Public Class Form1
         Dim fecha_expiracion_param As String = "%" & txt_fecha_expiracion.Text & "%"
         Dim numero_plastico_param As String = "%" & txt_numero_plastico.Text & "%"
         Dim numero_chip_param As String = "%" & txt_numero_chip.Text & "%"
-
         If cedula_param = "%" & txt_cedula.Tag & "%" Then cedula_param = "%%"
         If nombres_param = "%" & txt_nombres.Tag & "%" Then nombres_param = "%%"
         If apellidos_param = "%" & txt_apellidos.Tag & "%" Then apellidos_param = "%%"
@@ -987,4 +993,16 @@ Public Class Form1
         Me.cedulasTableAdapter.Buscar(Me.CedulasDBDataSet.cedulas, cedula_param, nombres_param, apellidos_param, nacionalidad_param, sexo_param, lugar_nacimiento_param, fecha_nacimiento_param, profesion_param, telefono_param, direccion_param, fecha_expiracion_param, numero_plastico_param, numero_chip_param)
         Return True
     End Function
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        abrir(ventana_regresar)
+    End Sub
+
+    Private Sub Button4_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        Derecha.Visible = False
+    End Sub
+
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+        Derecha.Visible = False
+    End Sub
 End Class
