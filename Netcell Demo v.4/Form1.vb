@@ -750,7 +750,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Panel8_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel8.Paint
+    Private Sub Panel8_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs)
 
     End Sub
 
@@ -789,7 +789,202 @@ Public Class Form1
         Exit Sub
     End Sub
 
-    Private Sub Label67_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label67.Click
+    Private Sub Label67_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+   
+
+    End Sub
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+      
+    End Sub
+
+    Private Sub Button5_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        If SplitContainer1.Panel1Collapsed = False Then
+            SplitContainer1.Panel1Collapsed = True
+            SplitContainer1.Panel2Collapsed = False
+        Else
+            SplitContainer1.Panel1Collapsed = False
+            SplitContainer1.Panel2Collapsed = True
+        End If
+    End Sub
+
+    Private Sub txt_cedula_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cedula.GotFocus
+        getfocus(txt_cedula)
+    End Sub
+    Private Sub txt_cedula_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cedula.LostFocus
+        lestfocus(txt_cedula)
+    End Sub
+    Private Sub txt_cedula_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_cedula.TextChanged
+        buscar()
+    End Sub
+
+    Private Sub txt_nombres_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_nombres.GotFocus
+        getfocus(txt_nombres)
+    End Sub
+    Private Sub txt_nombres_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_nombres.LostFocus
+        lestfocus(txt_nombres)
+    End Sub
+    Private Sub txt_nombres_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_nombres.TextChanged
+        buscar()
+    End Sub
+
+    Private Sub txt_apellidos_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_apellidos.GotFocus
+        getfocus(txt_apellidos)
+    End Sub
+    Private Sub txt_apellidos_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_apellidos.LostFocus
+        lestfocus(txt_apellidos)
+    End Sub
+    Private Sub txt_apellidos_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_apellidos.TextChanged
+        buscar()
+    End Sub
+
+    Private Sub txt_nacionalidad_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_nacionalidad.GotFocus
+        getfocus(txt_nacionalidad)
+    End Sub
+    Private Sub txt_nacionalidad_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_nacionalidad.LostFocus
+        lestfocus(txt_nacionalidad)
+    End Sub
+    Private Sub txt_nacionalidad_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_nacionalidad.TextChanged
+        buscar()
+    End Sub
+
+    Private Sub txt_sexo_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_sexo.GotFocus
+        getfocus(txt_sexo)
+    End Sub
+    Private Sub txt_sexo_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_sexo.LostFocus
+        lestfocus(txt_sexo)
+    End Sub
+    Private Sub txt_sexo_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_sexo.TextChanged
+        buscar()
+    End Sub
+
+    Private Sub txt_lugar_nacimiento_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_lugar_nacimiento.GotFocus
+        getfocus(txt_lugar_nacimiento)
+    End Sub
+    Private Sub txt_lugar_nacimiento_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_lugar_nacimiento.LostFocus
+        lestfocus(txt_lugar_nacimiento)
+    End Sub
+    Private Sub txt_lugar_nacimiento_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_lugar_nacimiento.TextChanged
+        buscar()
+    End Sub
+
+    Private Sub txt_fecha_nacimiento_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_fecha_nacimiento.GotFocus
+        getfocus(txt_fecha_nacimiento)
+    End Sub
+    Private Sub txt_fecha_nacimiento_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_fecha_nacimiento.LostFocus
+        lestfocus(txt_fecha_nacimiento)
+    End Sub
+    Private Sub txt_fecha_nacimiento_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_fecha_nacimiento.TextChanged
+        buscar()
+    End Sub
+
+    Private Sub txt_profesion_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_profesion.GotFocus
+        getfocus(txt_profesion)
+    End Sub
+    Private Sub txt_profesion_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_profesion.LostFocus
+        lestfocus(txt_profesion)
+    End Sub
+    Private Sub txt_profesion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_profesion.TextChanged
+        buscar()
+    End Sub
+
+    Private Sub txt_telefono_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_telefono.GotFocus
+        getfocus(txt_telefono)
+    End Sub
+    Private Sub txt_telefono_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_telefono.LostFocus
+        lestfocus(txt_telefono)
+    End Sub
+    Private Sub txt_telefono_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_telefono.TextChanged
+        buscar()
+    End Sub
+
+    Private Sub txt_direccion_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_direccion.GotFocus
+        getfocus(txt_direccion)
+    End Sub
+    Private Sub txt_direccion_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_direccion.LostFocus
+        lestfocus(txt_direccion)
+    End Sub
+    Private Sub txt_direccion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_direccion.TextChanged
+        buscar()
+    End Sub
+
+    Private Sub txt_fecha_expiracion_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_fecha_expiracion.GotFocus
+        getfocus(txt_fecha_expiracion)
+    End Sub
+    Private Sub txt_fecha_expiracion_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_fecha_expiracion.LostFocus
+        lestfocus(txt_fecha_expiracion)
+    End Sub
+    Private Sub txt_fecha_expiracion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_fecha_expiracion.TextChanged
+        buscar()
+    End Sub
+
+    Private Sub txt_numero_plastico_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_numero_plastico.GotFocus
+        getfocus(txt_numero_plastico)
+    End Sub
+    Private Sub txt_numero_plastico_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_numero_plastico.LostFocus
+        lestfocus(txt_numero_plastico)
+    End Sub
+    Private Sub txt_numero_plastico_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_numero_plastico.TextChanged
+        buscar()
+    End Sub
+
+    Private Sub txt_numero_chip_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_numero_chip.GotFocus
+        getfocus(txt_numero_chip)
+    End Sub
+    Private Sub txt_numero_chip_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_numero_chip.LostFocus
+        lestfocus(txt_numero_chip)
+    End Sub
+    Private Sub txt_numero_chip_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_numero_chip.TextChanged
+        buscar()
+    End Sub
+
+    Function getfocus(ByVal textbox_name As TextBox)
+        If textbox_name.Text = textbox_name.Tag Then
+            textbox_name.ForeColor = Color.Black
+            textbox_name.Text = ""
+        End If
+        Return True
+    End Function
+    Function lestfocus(ByVal textbox_name As TextBox)
+        If textbox_name.Text = Nothing Then
+            textbox_name.ForeColor = Color.Gray
+            textbox_name.Text = textbox_name.Tag
+        End If
+        Return True
+    End Function
+    Function buscar()
+        Dim cedula_param As String = "%" & txt_cedula.Text & "%"
+        Dim nombres_param As String = "%" & txt_nombres.Text & "%"
+        Dim apellidos_param As String = "%" & txt_apellidos.Text & "%"
+        Dim nacionalidad_param As String = "%" & txt_nacionalidad.Text & "%"
+        Dim sexo_param As String = "%" & txt_sexo.Text & "%"
+        Dim lugar_nacimiento_param As String = "%" & txt_lugar_nacimiento.Text & "%"
+        Dim fecha_nacimiento_param As String = "%" & txt_fecha_nacimiento.Text & "%"
+        Dim profesion_param As String = "%" & txt_profesion.Text & "%"
+        Dim telefono_param As String = "%" & txt_telefono.Text & "%"
+        Dim direccion_param As String = "%" & txt_direccion.Text & "%"
+        Dim fecha_expiracion_param As String = "%" & txt_fecha_expiracion.Text & "%"
+        Dim numero_plastico_param As String = "%" & txt_numero_plastico.Text & "%"
+        Dim numero_chip_param As String = "%" & txt_numero_chip.Text & "%"
+
+        If cedula_param = "%" & txt_cedula.Tag & "%" Then cedula_param = "%%"
+        If nombres_param = "%" & txt_nombres.Tag & "%" Then nombres_param = "%%"
+        If apellidos_param = "%" & txt_apellidos.Tag & "%" Then apellidos_param = "%%"
+        If nacionalidad_param = "%" & txt_nacionalidad.Tag & "%" Then nacionalidad_param = "%%"
+        If sexo_param = "%" & txt_sexo.Tag & "%" Then sexo_param = "%%"
+        If lugar_nacimiento_param = "%" & txt_lugar_nacimiento.Tag & "%" Then lugar_nacimiento_param = "%%"
+        If fecha_nacimiento_param = "%" & txt_fecha_nacimiento.Tag & "%" Then fecha_nacimiento_param = "%%"
+        If profesion_param = "%" & txt_profesion.Tag & "%" Then profesion_param = "%%"
+        If telefono_param = "%" & txt_telefono.Tag & "%" Then telefono_param = "%%"
+        If direccion_param = "%" & txt_direccion.Tag & "%" Then direccion_param = "%%"
+        If fecha_expiracion_param = "%" & txt_fecha_expiracion.Tag & "%" Then fecha_expiracion_param = "%%"
+        If numero_plastico_param = "%" & txt_numero_plastico.Tag & "%" Then numero_plastico_param = "%%"
+        If numero_chip_param = "%" & txt_numero_chip.Tag & "%" Then numero_chip_param = "%%"
+        Me.cedulasTableAdapter.Buscar(Me.CedulasDBDataSet.cedulas, cedula_param, nombres_param, apellidos_param, nacionalidad_param, sexo_param, lugar_nacimiento_param, fecha_nacimiento_param, profesion_param, telefono_param, direccion_param, fecha_expiracion_param, numero_plastico_param, numero_chip_param)
+        Return True
+    End Function
 End Class
