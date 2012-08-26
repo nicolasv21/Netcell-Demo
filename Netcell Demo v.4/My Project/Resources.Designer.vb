@@ -165,6 +165,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property config_icon() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("config-icon", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property config2() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("config2", resourceCulture)

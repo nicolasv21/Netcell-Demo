@@ -319,6 +319,7 @@
   <ItemGroup>
     <Content Include="ico-Netcell.ico" />
     <Content Include="Resources\ani2.png" />
+    <None Include="Resources\config-icon.png" />
     <None Include="Resources\search.png" />
     <None Include="Resources\btn-imprimir.png" />
     <None Include="Resources\config2.png" />

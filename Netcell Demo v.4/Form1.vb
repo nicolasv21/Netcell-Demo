@@ -987,6 +987,11 @@ Public Class Form1
         If SplitContainer1.Panel2Collapsed = False Then
             SplitContainer1.Panel2Collapsed = True
             SplitContainer1.Panel1Collapsed = False
+            Imprimir_ventanas.Panel1Collapsed = True
+            Imprimir_ventanas.Panel2Collapsed = False
+        Else
+            Imprimir_ventanas.Panel1Collapsed = True
+            Imprimir_ventanas.Panel2Collapsed = False
         End If
     End Sub
 
@@ -1012,4 +1017,129 @@ Public Class Form1
         iden = True
         Me.Timer2.Enabled = False
     End Sub
+
+   
+    Private Sub Label82_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label82.Click
+
+    End Sub
+
+    Private Sub Button5_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        Derecha.Visible = True
+        If SplitContainer1.Panel2Collapsed = False Then
+            SplitContainer1.Panel2Collapsed = True
+            SplitContainer1.Panel1Collapsed = False
+            Imprimir_ventanas.Panel2Collapsed = True
+            Imprimir_ventanas.Panel1Collapsed = False
+        Else
+            Imprimir_ventanas.Panel2Collapsed = True
+            Imprimir_ventanas.Panel1Collapsed = False
+        End If
+    End Sub
+
+   
+
+    Private Sub Button11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+
+        ' Me.cedulasTableAdapter.Adapter.SelectCommand.CommandText = "Select * from cedulas"
+        'Me.cedulasTableAdapter.Fill(Me.CedulasDBDataSet.cedulas)
+
+
+    End Sub
+
+    Private Sub a1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a1.CheckedChanged
+        If a1.Checked = False Then
+            DataGridView1.Columns.Item(1).Visible = False
+        Else
+            DataGridView1.Columns.Item(1).Visible = True
+        End If
+    End Sub
+
+    Private Sub a2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a2.CheckedChanged
+        If a2.Checked = False Then
+            DataGridView1.Columns.Item(2).Visible = False
+        Else
+            DataGridView1.Columns.Item(2).Visible = True
+        End If
+    End Sub
+    Private Sub a3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a3.CheckedChanged
+        If a3.Checked = False Then
+            DataGridView1.Columns.Item(3).Visible = False
+        Else
+            DataGridView1.Columns.Item(3).Visible = True
+        End If
+    End Sub
+    Private Sub a4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a4.CheckedChanged
+        If a4.Checked = False Then
+            DataGridView1.Columns.Item(4).Visible = False
+        Else
+            DataGridView1.Columns.Item(4).Visible = True
+        End If
+    End Sub
+    Private Sub a5_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a5.CheckedChanged
+        If a5.Checked = False Then
+            DataGridView1.Columns.Item(5).Visible = False
+        Else
+            DataGridView1.Columns.Item(5).Visible = True
+        End If
+    End Sub
+    Private Sub a6_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a6.CheckedChanged
+        If a6.Checked = False Then
+            DataGridView1.Columns.Item(6).Visible = False
+        Else
+            DataGridView1.Columns.Item(6).Visible = True
+        End If
+    End Sub
+    Private Sub a7_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a7.CheckedChanged
+        If a7.Checked = False Then
+            DataGridView1.Columns.Item(7).Visible = False
+        Else
+            DataGridView1.Columns.Item(7).Visible = True
+        End If
+    End Sub
+    Private Sub a8_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a8.CheckedChanged
+        If a8.Checked = False Then
+            DataGridView1.Columns.Item(8).Visible = False
+        Else
+            DataGridView1.Columns.Item(8).Visible = True
+        End If
+    End Sub
+    Private Sub a9_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a9.CheckedChanged
+        If a9.Checked = False Then
+            DataGridView1.Columns.Item(9).Visible = False
+        Else
+            DataGridView1.Columns.Item(9).Visible = True
+        End If
+    End Sub
+    Private Sub a10_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a10.CheckedChanged
+        If a10.Checked = False Then
+            DataGridView1.Columns.Item(10).Visible = False
+        Else
+            DataGridView1.Columns.Item(10).Visible = True
+        End If
+    End Sub
+    Private Sub a11_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a11.CheckedChanged
+        If a11.Checked = False Then
+            DataGridView1.Columns.Item(11).Visible = False
+        Else
+            DataGridView1.Columns.Item(11).Visible = True
+        End If
+    End Sub
+    Private Sub a12_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a12.CheckedChanged
+        If a12.Checked = False Then
+            DataGridView1.Columns.Item(12).Visible = False
+        Else
+            DataGridView1.Columns.Item(12).Visible = True
+        End If
+    End Sub
+    Private Sub a13_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a13.CheckedChanged
+        If a13.Checked = False Then
+            DataGridView1.Columns.Item(13).Visible = False
+        Else
+            DataGridView1.Columns.Item(2).Visible = True
+        End If
+    End Sub
+
+   
+
 End Class
