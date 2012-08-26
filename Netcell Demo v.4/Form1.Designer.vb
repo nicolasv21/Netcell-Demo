@@ -24,8 +24,8 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Dim ReportDataSource5 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.loglist = New System.Windows.Forms.ListBox()
         Me.fail = New System.Windows.Forms.Panel()
         Me.Label55 = New System.Windows.Forms.Label()
@@ -176,6 +176,7 @@ Partial Class Form1
         Me.CedulasDBDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CedulasDBDataSet = New Netcell_Demo_v._4.CedulasDBDataSet()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label80 = New System.Windows.Forms.Label()
@@ -183,6 +184,8 @@ Partial Class Form1
         Me.OtiIcao1 = New OtiIcaoSDK.OtiIcao(Me.components)
         Me.Derecha = New System.Windows.Forms.Panel()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.txt_numero_chip = New System.Windows.Forms.TextBox()
         Me.txt_numero_plastico = New System.Windows.Forms.TextBox()
         Me.txt_fecha_expiracion = New System.Windows.Forms.TextBox()
@@ -225,6 +228,7 @@ Partial Class Form1
         Me.Label78 = New System.Windows.Forms.Label()
         Me.Label79 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.PictureBox17 = New System.Windows.Forms.PictureBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label63 = New System.Windows.Forms.Label()
@@ -237,6 +241,9 @@ Partial Class Form1
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label64 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
         Me.Footer = New System.Windows.Forms.Panel()
         Me.Panel18 = New System.Windows.Forms.Panel()
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
@@ -250,8 +257,7 @@ Partial Class Form1
         Me.lbl_footer_1 = New System.Windows.Forms.Label()
         Me.lbl_footer_2 = New System.Windows.Forms.Label()
         Me.cedulasTableAdapter = New Netcell_Demo_v._4.CedulasDBDataSetTableAdapters.cedulasTableAdapter()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.fail.SuspendLayout()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Datos.SuspendLayout()
@@ -293,6 +299,7 @@ Partial Class Form1
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -313,6 +320,7 @@ Partial Class Form1
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        Me.FlowLayoutPanel3.SuspendLayout()
         Me.Footer.SuspendLayout()
         Me.Panel18.SuspendLayout()
         Me.FlowLayoutPanel2.SuspendLayout()
@@ -1764,9 +1772,9 @@ Partial Class Form1
         'ReportViewer1
         '
         Me.ReportViewer1.DocumentMapWidth = 71
-        ReportDataSource5.Name = "DataSet1"
-        ReportDataSource5.Value = Nothing
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource5)
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Nothing
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Netcell_Demo_v._4.Report1.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(50, 29)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -1946,9 +1954,10 @@ Partial Class Form1
         Me.imprimir.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.imprimir.Controls.Add(Me.Panel2)
         Me.imprimir.Controls.Add(Me.Panel1)
-        Me.imprimir.Location = New System.Drawing.Point(52, 89)
+        Me.imprimir.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.imprimir.Location = New System.Drawing.Point(0, 0)
         Me.imprimir.Name = "imprimir"
-        Me.imprimir.Size = New System.Drawing.Size(497, 355)
+        Me.imprimir.Size = New System.Drawing.Size(935, 498)
         Me.imprimir.TabIndex = 204
         Me.imprimir.Visible = False
         '
@@ -1960,7 +1969,7 @@ Partial Class Form1
         Me.Panel2.Location = New System.Drawing.Point(0, 72)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Padding = New System.Windows.Forms.Padding(10, 0, 15, 5)
-        Me.Panel2.Size = New System.Drawing.Size(497, 283)
+        Me.Panel2.Size = New System.Drawing.Size(935, 426)
         Me.Panel2.TabIndex = 64
         '
         'DataGridView1
@@ -1974,19 +1983,19 @@ Partial Class Form1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.NacionalidadDataGridViewTextBoxColumn, Me.SexoDataGridViewTextBoxColumn, Me.LugarnacimientoDataGridViewTextBoxColumn, Me.FechanacimientoDataGridViewTextBoxColumn, Me.ProfesionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.FechaexpiracionDataGridViewTextBoxColumn, Me.NumeroplasticoDataGridViewTextBoxColumn, Me.NumerochipDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.BindingSource1
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(10, 0)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(472, 278)
+        Me.DataGridView1.Size = New System.Drawing.Size(910, 421)
         Me.DataGridView1.TabIndex = 2
         '
         'IdDataGridViewTextBoxColumn
@@ -2108,6 +2117,7 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Button8)
         Me.Panel1.Controls.Add(Me.Button6)
         Me.Panel1.Controls.Add(Me.Button5)
         Me.Panel1.Controls.Add(Me.Label80)
@@ -2115,8 +2125,23 @@ Partial Class Form1
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(497, 72)
+        Me.Panel1.Size = New System.Drawing.Size(935, 72)
         Me.Panel1.TabIndex = 63
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.Transparent
+        Me.Button8.FlatAppearance.BorderSize = 0
+        Me.Button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.ForeColor = System.Drawing.Color.Transparent
+        Me.Button8.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.btn_imprimir
+        Me.Button8.Location = New System.Drawing.Point(148, 22)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(40, 45)
+        Me.Button8.TabIndex = 63
+        Me.Button8.UseVisualStyleBackColor = False
         '
         'Button6
         '
@@ -2126,10 +2151,10 @@ Partial Class Form1
         Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.ForeColor = System.Drawing.Color.Transparent
-        Me.Button6.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.arrow
-        Me.Button6.Location = New System.Drawing.Point(344, 12)
+        Me.Button6.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.btn_search5
+        Me.Button6.Location = New System.Drawing.Point(54, 22)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(50, 45)
+        Me.Button6.Size = New System.Drawing.Size(40, 45)
         Me.Button6.TabIndex = 61
         Me.Button6.UseVisualStyleBackColor = False
         '
@@ -2141,11 +2166,11 @@ Partial Class Form1
         Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.ForeColor = System.Drawing.Color.Transparent
-        Me.Button5.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.arrow
-        Me.Button5.Location = New System.Drawing.Point(295, 14)
+        Me.Button5.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.config2
+        Me.Button5.Location = New System.Drawing.Point(101, 22)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(50, 45)
-        Me.Button5.TabIndex = 60
+        Me.Button5.Size = New System.Drawing.Size(40, 45)
+        Me.Button5.TabIndex = 62
         Me.Button5.UseVisualStyleBackColor = False
         '
         'Label80
@@ -2153,7 +2178,7 @@ Partial Class Form1
         Me.Label80.AutoSize = True
         Me.Label80.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label80.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label80.Location = New System.Drawing.Point(83, 24)
+        Me.Label80.Location = New System.Drawing.Point(208, 34)
         Me.Label80.Name = "Label80"
         Me.Label80.Size = New System.Drawing.Size(170, 25)
         Me.Label80.TabIndex = 59
@@ -2168,7 +2193,7 @@ Partial Class Form1
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.ForeColor = System.Drawing.Color.Transparent
         Me.Button3.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.arrow
-        Me.Button3.Location = New System.Drawing.Point(4, 12)
+        Me.Button3.Location = New System.Drawing.Point(4, 22)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(50, 45)
         Me.Button3.TabIndex = 0
@@ -2207,6 +2232,7 @@ Partial Class Form1
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PictureBox23)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button7)
         Me.SplitContainer1.Panel1.Controls.Add(Me.txt_numero_chip)
         Me.SplitContainer1.Panel1.Controls.Add(Me.txt_numero_plastico)
@@ -2231,6 +2257,29 @@ Partial Class Form1
         Me.SplitContainer1.Size = New System.Drawing.Size(249, 498)
         Me.SplitContainer1.SplitterDistance = 113
         Me.SplitContainer1.TabIndex = 2
+        '
+        'PictureBox23
+        '
+        Me.PictureBox23.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.search
+        Me.PictureBox23.Location = New System.Drawing.Point(24, 31)
+        Me.PictureBox23.Name = "PictureBox23"
+        Me.PictureBox23.Size = New System.Drawing.Size(31, 27)
+        Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox23.TabIndex = 76
+        Me.PictureBox23.TabStop = False
+        '
+        'Button7
+        '
+        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.ForeColor = System.Drawing.Color.White
+        Me.Button7.Location = New System.Drawing.Point(224, 5)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(21, 22)
+        Me.Button7.TabIndex = 75
+        Me.Button7.Text = "X"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'txt_numero_chip
         '
@@ -2367,7 +2416,7 @@ Partial Class Form1
         Me.Label81.AutoSize = True
         Me.Label81.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label81.ForeColor = System.Drawing.Color.White
-        Me.Label81.Location = New System.Drawing.Point(19, 31)
+        Me.Label81.Location = New System.Drawing.Point(57, 32)
         Me.Label81.Name = "Label81"
         Me.Label81.Size = New System.Drawing.Size(95, 25)
         Me.Label81.TabIndex = 60
@@ -2687,6 +2736,18 @@ Partial Class Form1
         Me.Panel8.Size = New System.Drawing.Size(249, 205)
         Me.Panel8.TabIndex = 1
         '
+        'Button4
+        '
+        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(225, 4)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(21, 22)
+        Me.Button4.TabIndex = 59
+        Me.Button4.Text = "X"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'PictureBox17
         '
         Me.PictureBox17.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.hardware
@@ -2798,11 +2859,12 @@ Partial Class Form1
         '
         'Panel4
         '
+        Me.Panel4.Controls.Add(Me.FlowLayoutPanel3)
+        Me.Panel4.Controls.Add(Me.imprimir)
         Me.Panel4.Controls.Add(Me.AxGrFingerXCtrl1)
         Me.Panel4.Controls.Add(Me.Header)
         Me.Panel4.Controls.Add(Me.Report)
         Me.Panel4.Controls.Add(Me.id_file)
-        Me.Panel4.Controls.Add(Me.imprimir)
         Me.Panel4.Controls.Add(Me.Error_1)
         Me.Panel4.Controls.Add(Me.Datos)
         Me.Panel4.Controls.Add(Me.fail)
@@ -2812,6 +2874,41 @@ Partial Class Form1
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(935, 498)
         Me.Panel4.TabIndex = 206
+        '
+        'FlowLayoutPanel3
+        '
+        Me.FlowLayoutPanel3.Controls.Add(Me.Button9)
+        Me.FlowLayoutPanel3.Controls.Add(Me.Button10)
+        Me.FlowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.FlowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
+        Me.FlowLayoutPanel3.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel3.Name = "FlowLayoutPanel3"
+        Me.FlowLayoutPanel3.Size = New System.Drawing.Size(935, 26)
+        Me.FlowLayoutPanel3.TabIndex = 210
+        '
+        'Button9
+        '
+        Me.Button9.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.Location = New System.Drawing.Point(911, 3)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(21, 22)
+        Me.Button9.TabIndex = 60
+        Me.Button9.Text = "X"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'Button10
+        '
+        Me.Button10.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button10.Location = New System.Drawing.Point(884, 3)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(21, 22)
+        Me.Button10.TabIndex = 61
+        Me.Button10.Text = "-"
+        Me.Button10.UseVisualStyleBackColor = True
         '
         'Footer
         '
@@ -2967,30 +3064,9 @@ Partial Class Form1
         '
         Me.cedulasTableAdapter.ClearBeforeFill = True
         '
-        'Button4
+        'Timer2
         '
-        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(225, 4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(21, 22)
-        Me.Button4.TabIndex = 59
-        Me.Button4.Text = "X"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.ForeColor = System.Drawing.Color.White
-        Me.Button7.Location = New System.Drawing.Point(224, 5)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(21, 22)
-        Me.Button7.TabIndex = 75
-        Me.Button7.Text = "X"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.Timer2.Interval = 1
         '
         'Form1
         '
@@ -3057,6 +3133,7 @@ Partial Class Form1
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.Panel9.ResumeLayout(False)
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3086,6 +3163,7 @@ Partial Class Form1
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel4.ResumeLayout(False)
+        Me.FlowLayoutPanel3.ResumeLayout(False)
         Me.Footer.ResumeLayout(False)
         Me.Panel18.ResumeLayout(False)
         Me.FlowLayoutPanel2.ResumeLayout(False)
@@ -3267,7 +3345,6 @@ Partial Class Form1
     Friend WithEvents NumerochipDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Label80 As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
@@ -3326,5 +3403,12 @@ Partial Class Form1
     Friend WithEvents Label81 As System.Windows.Forms.Label
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Button8 As System.Windows.Forms.Button
+    Friend WithEvents FlowLayoutPanel3 As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents Button9 As System.Windows.Forms.Button
+    Friend WithEvents Button10 As System.Windows.Forms.Button
+    Friend WithEvents PictureBox23 As System.Windows.Forms.PictureBox
+    Friend WithEvents Timer2 As System.Windows.Forms.Timer
 
 End Class

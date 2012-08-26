@@ -95,6 +95,62 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property btn_config() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("btn-config", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property btn_imprimir() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("btn-imprimir", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property btn_search() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("btn-search", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property btn_search1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("btn-search1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property btn_search2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("btn-search2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property btn_search3() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("btn-search3", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property btn_search4() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("btn-search4", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property btn_search5() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("btn-search5", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property cancel() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("cancel", resourceCulture)
@@ -105,6 +161,13 @@ Namespace My.Resources
         Friend ReadOnly Property codigo() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("codigo", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property config2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("config2", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -273,6 +336,13 @@ Namespace My.Resources
         Friend ReadOnly Property ok() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("ok", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property search() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("search", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

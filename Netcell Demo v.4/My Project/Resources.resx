@@ -118,14 +118,29 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="d0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\d0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn-config" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-config.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn-search4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-search4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn-search5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-search5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ani1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ani2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="d7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn-search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hardware" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hardware.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -138,6 +153,9 @@
   </data>
   <data name="fail2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fail2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn-search2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-search2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="d00" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,6 +181,9 @@
   <data name="ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="config2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\config2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="foto2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foto2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,8 +193,8 @@
   <data name="d4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="d0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="d10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -183,6 +204,12 @@
   </data>
   <data name="d1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn-search3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-search3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn-search1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-search1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="disconnect" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\disconnect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,6 +229,9 @@
   <data name="Foto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Foto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btn-imprimir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-imprimir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fail21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fail21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,7 +241,7 @@
   <data name="d8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

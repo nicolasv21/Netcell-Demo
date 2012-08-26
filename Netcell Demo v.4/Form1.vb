@@ -359,7 +359,7 @@ Public Class Form1
                         End If
                     End If
                     myUtil.DB.clearDB()
-                    Me.Timer1.Enabled = True
+                    Me.Timer2.Enabled = True
                 Else
                     Try
                         Dim input As New FileStream("C:\Netcell\Working\blob_2_PersData.bin", FileMode.Open)
@@ -381,7 +381,7 @@ Public Class Form1
                             End If
                         End If
                         myUtil.DB.clearDB()
-                        Me.Timer1.Enabled = True
+                        Me.Timer2.Enabled = True
                     Catch ex As Exception
 
                     End Try
@@ -567,24 +567,7 @@ Public Class Form1
 
 
 
-    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
-        myUtil.ExtractTemplate()
-        Dim id As Integer
-        id = myUtil.Enroll()
-        Me.d_sensor.Image = Nothing
-        Me.d_sensor.Update()
-
-
-        ' write result to log
-        If id >= 0 Then
-            'myUtil.WriteLog("Fingerprint enrolled with id = " & id)
-        Else
-            'myUtil.WriteLog("Error: Fingerprint not enrolled")
-        End If
-        extraer = True
-        iden = True
-        Me.Timer1.Enabled = False
-    End Sub
+ 
 
     Private Sub AxGrFingerXCtrl1_ImageAcquired1(ByVal sender As Object, ByVal e As AxGrFingerXLib._IGrFingerXCtrlEvents_ImageAcquiredEvent) Handles AxGrFingerXCtrl1.ImageAcquired
         ' Copying aquired image
@@ -808,15 +791,8 @@ Public Class Form1
       
     End Sub
 
-    Private Sub Button5_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
-        Derecha.Visible = True
-        If SplitContainer1.Panel1Collapsed = False Then
-            SplitContainer1.Panel1Collapsed = True
-            SplitContainer1.Panel2Collapsed = False
-        Else
-            SplitContainer1.Panel1Collapsed = False
-            SplitContainer1.Panel2Collapsed = True
-        End If
+    Private Sub Button5_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    
     End Sub
 
     Private Sub txt_cedula_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cedula.GotFocus
@@ -1004,5 +980,36 @@ Public Class Form1
 
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
         Derecha.Visible = False
+    End Sub
+
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        Derecha.Visible = True
+        If SplitContainer1.Panel2Collapsed = False Then
+            SplitContainer1.Panel2Collapsed = True
+            SplitContainer1.Panel1Collapsed = False
+        End If
+    End Sub
+
+    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
+        myUtil.ExtractTemplate()
+        Dim id As Integer
+        id = myUtil.Enroll()
+        Me.d_sensor.Image = Nothing
+        Me.d_sensor.Update()
+
+
+        ' write result to log
+        If id >= 0 Then
+            'myUtil.WriteLog("Fingerprint enrolled with id = " & id)
+        Else
+            'myUtil.WriteLog("Error: Fingerprint not enrolled")
+        End If
+        extraer = True
+        iden = True
+        Me.Timer2.Enabled = False
     End Sub
 End Class

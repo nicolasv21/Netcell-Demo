@@ -319,6 +319,16 @@
   <ItemGroup>
     <Content Include="ico-Netcell.ico" />
     <Content Include="Resources\ani2.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\btn-imprimir.png" />
+    <None Include="Resources\config2.png" />
+    <None Include="Resources\btn-config.png" />
+    <None Include="Resources\btn-search5.png" />
+    <None Include="Resources\btn-search4.png" />
+    <None Include="Resources\btn-search3.png" />
+    <None Include="Resources\btn-search2.png" />
+    <None Include="Resources\btn-search1.png" />
+    <None Include="Resources\btn-search.png" />
     <None Include="Resources\arrow.png" />
     <Content Include="Resources\background3.png" />
     <None Include="Resources\foto3.png" />
