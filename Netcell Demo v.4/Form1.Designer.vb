@@ -24,10 +24,10 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Dim ReportDataSource4 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ReportDataSource6 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.loglist = New System.Windows.Forms.ListBox()
         Me.fail = New System.Windows.Forms.Panel()
         Me.Label55 = New System.Windows.Forms.Label()
@@ -235,32 +235,11 @@ Partial Class Form1
         Me.txt_cedula = New System.Windows.Forms.TextBox()
         Me.Label81 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
-        Me.Panel14 = New System.Windows.Forms.Panel()
-        Me.Label67 = New System.Windows.Forms.Label()
-        Me.Label66 = New System.Windows.Forms.Label()
-        Me.Label65 = New System.Windows.Forms.Label()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
-        Me.Label69 = New System.Windows.Forms.Label()
-        Me.Label70 = New System.Windows.Forms.Label()
-        Me.Label68 = New System.Windows.Forms.Label()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
-        Me.Label71 = New System.Windows.Forms.Label()
-        Me.Label72 = New System.Windows.Forms.Label()
-        Me.Label73 = New System.Windows.Forms.Label()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.PictureBox21 = New System.Windows.Forms.PictureBox()
         Me.Label74 = New System.Windows.Forms.Label()
         Me.Label75 = New System.Windows.Forms.Label()
         Me.Label76 = New System.Windows.Forms.Label()
-        Me.Panel13 = New System.Windows.Forms.Panel()
-        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
-        Me.Label77 = New System.Windows.Forms.Label()
-        Me.Label78 = New System.Windows.Forms.Label()
-        Me.Label79 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.PictureBox17 = New System.Windows.Forms.PictureBox()
@@ -295,6 +274,7 @@ Partial Class Form1
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.fail.SuspendLayout()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Datos.SuspendLayout()
@@ -344,17 +324,8 @@ Partial Class Form1
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FlowLayoutPanel1.SuspendLayout()
-        Me.Panel9.SuspendLayout()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel14.SuspendLayout()
-        Me.Panel10.SuspendLayout()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel11.SuspendLayout()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel12.SuspendLayout()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel13.SuspendLayout()
-        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
@@ -1816,9 +1787,9 @@ Partial Class Form1
         'ReportViewer1
         '
         Me.ReportViewer1.DocumentMapWidth = 71
-        ReportDataSource4.Name = "DataSet1"
-        ReportDataSource4.Value = Nothing
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource4)
+        ReportDataSource6.Name = "DataSet1"
+        ReportDataSource6.Value = Nothing
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource6)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Netcell_Demo_v._4.Report1.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(50, 29)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -2020,31 +1991,31 @@ Partial Class Form1
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AllowUserToOrderColumns = True
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
         Me.DataGridView1.ColumnHeadersHeight = 25
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.NacionalidadDataGridViewTextBoxColumn, Me.SexoDataGridViewTextBoxColumn, Me.LugarnacimientoDataGridViewTextBoxColumn, Me.FechanacimientoDataGridViewTextBoxColumn, Me.ProfesionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.FechaexpiracionDataGridViewTextBoxColumn, Me.NumeroplasticoDataGridViewTextBoxColumn, Me.NumerochipDataGridViewTextBoxColumn, Me.FotoDataGridViewImageColumn, Me.FirmaDataGridViewImageColumn})
         Me.DataGridView1.DataSource = Me.BindingSource1
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ControlDark
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.ControlDark
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle18
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.Control
@@ -2332,12 +2303,12 @@ Partial Class Form1
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.SplitContainer1.Panel1.Controls.Add(Me.Panel3)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Imprimir_ventanas)
+        Me.SplitContainer1.Panel1Collapsed = True
         '
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.FlowLayoutPanel1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Panel8)
-        Me.SplitContainer1.Panel2Collapsed = True
         Me.SplitContainer1.Size = New System.Drawing.Size(249, 498)
         Me.SplitContainer1.SplitterDistance = 113
         Me.SplitContainer1.TabIndex = 2
@@ -2348,7 +2319,7 @@ Partial Class Form1
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(249, 23)
+        Me.Panel3.Size = New System.Drawing.Size(113, 23)
         Me.Panel3.TabIndex = 78
         '
         'Button7
@@ -2400,6 +2371,7 @@ Partial Class Form1
         Me.Imprimir_ventanas.Panel1.Controls.Add(Me.Label95)
         Me.Imprimir_ventanas.Panel1.Controls.Add(Me.PictureBox24)
         Me.Imprimir_ventanas.Panel1.Controls.Add(Me.Label82)
+        Me.Imprimir_ventanas.Panel1Collapsed = True
         '
         'Imprimir_ventanas.Panel2
         '
@@ -2418,7 +2390,7 @@ Partial Class Form1
         Me.Imprimir_ventanas.Panel2.Controls.Add(Me.txt_nombres)
         Me.Imprimir_ventanas.Panel2.Controls.Add(Me.txt_cedula)
         Me.Imprimir_ventanas.Panel2.Controls.Add(Me.Label81)
-        Me.Imprimir_ventanas.Size = New System.Drawing.Size(249, 498)
+        Me.Imprimir_ventanas.Size = New System.Drawing.Size(113, 498)
         Me.Imprimir_ventanas.SplitterDistance = 123
         Me.Imprimir_ventanas.TabIndex = 77
         '
@@ -2909,190 +2881,12 @@ Partial Class Form1
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.AutoScroll = True
-        Me.FlowLayoutPanel1.Controls.Add(Me.Panel9)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Panel10)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Panel11)
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel12)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Panel13)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 205)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(96, 0)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(249, 293)
         Me.FlowLayoutPanel1.TabIndex = 2
-        '
-        'Panel9
-        '
-        Me.Panel9.Controls.Add(Me.PictureBox18)
-        Me.Panel9.Controls.Add(Me.Panel14)
-        Me.Panel9.Location = New System.Drawing.Point(3, 3)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(226, 65)
-        Me.Panel9.TabIndex = 205
-        '
-        'PictureBox18
-        '
-        Me.PictureBox18.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.Foto
-        Me.PictureBox18.Location = New System.Drawing.Point(18, 6)
-        Me.PictureBox18.Name = "PictureBox18"
-        Me.PictureBox18.Size = New System.Drawing.Size(45, 55)
-        Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox18.TabIndex = 59
-        Me.PictureBox18.TabStop = False
-        '
-        'Panel14
-        '
-        Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(234, Byte), Integer))
-        Me.Panel14.Controls.Add(Me.Label67)
-        Me.Panel14.Controls.Add(Me.Label66)
-        Me.Panel14.Controls.Add(Me.Label65)
-        Me.Panel14.Location = New System.Drawing.Point(64, 6)
-        Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(147, 55)
-        Me.Panel14.TabIndex = 63
-        '
-        'Label67
-        '
-        Me.Label67.AutoSize = True
-        Me.Label67.BackColor = System.Drawing.Color.Transparent
-        Me.Label67.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label67.ForeColor = System.Drawing.Color.White
-        Me.Label67.Location = New System.Drawing.Point(5, 39)
-        Me.Label67.Name = "Label67"
-        Me.Label67.Size = New System.Drawing.Size(96, 13)
-        Me.Label67.TabIndex = 65
-        Me.Label67.Text = "21/08/2012  15:34"
-        '
-        'Label66
-        '
-        Me.Label66.AutoSize = True
-        Me.Label66.BackColor = System.Drawing.Color.Transparent
-        Me.Label66.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label66.ForeColor = System.Drawing.Color.White
-        Me.Label66.Location = New System.Drawing.Point(3, 18)
-        Me.Label66.Name = "Label66"
-        Me.Label66.Size = New System.Drawing.Size(89, 20)
-        Me.Label66.TabIndex = 64
-        Me.Label66.Text = "0919078097"
-        '
-        'Label65
-        '
-        Me.Label65.AutoSize = True
-        Me.Label65.BackColor = System.Drawing.Color.Transparent
-        Me.Label65.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label65.ForeColor = System.Drawing.Color.White
-        Me.Label65.Location = New System.Drawing.Point(3, 0)
-        Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(128, 17)
-        Me.Label65.TabIndex = 63
-        Me.Label65.Text = "Marjorie Valdiviezo"
-        '
-        'Panel10
-        '
-        Me.Panel10.Controls.Add(Me.PictureBox19)
-        Me.Panel10.Controls.Add(Me.Label69)
-        Me.Panel10.Controls.Add(Me.Label70)
-        Me.Panel10.Controls.Add(Me.Label68)
-        Me.Panel10.Location = New System.Drawing.Point(3, 74)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(226, 65)
-        Me.Panel10.TabIndex = 206
-        '
-        'PictureBox19
-        '
-        Me.PictureBox19.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.foto2
-        Me.PictureBox19.Location = New System.Drawing.Point(18, 6)
-        Me.PictureBox19.Name = "PictureBox19"
-        Me.PictureBox19.Size = New System.Drawing.Size(45, 55)
-        Me.PictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox19.TabIndex = 59
-        Me.PictureBox19.TabStop = False
-        '
-        'Label69
-        '
-        Me.Label69.AutoSize = True
-        Me.Label69.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label69.ForeColor = System.Drawing.Color.DimGray
-        Me.Label69.Location = New System.Drawing.Point(65, 22)
-        Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(89, 20)
-        Me.Label69.TabIndex = 61
-        Me.Label69.Text = "0919078097"
-        '
-        'Label70
-        '
-        Me.Label70.AutoSize = True
-        Me.Label70.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label70.ForeColor = System.Drawing.Color.Black
-        Me.Label70.Location = New System.Drawing.Point(65, 4)
-        Me.Label70.Name = "Label70"
-        Me.Label70.Size = New System.Drawing.Size(128, 17)
-        Me.Label70.TabIndex = 60
-        Me.Label70.Text = "Marjorie Valdiviezo"
-        '
-        'Label68
-        '
-        Me.Label68.AutoSize = True
-        Me.Label68.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label68.ForeColor = System.Drawing.Color.DimGray
-        Me.Label68.Location = New System.Drawing.Point(68, 43)
-        Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(93, 13)
-        Me.Label68.TabIndex = 62
-        Me.Label68.Text = "21/08/2012 15:34"
-        '
-        'Panel11
-        '
-        Me.Panel11.Controls.Add(Me.PictureBox20)
-        Me.Panel11.Controls.Add(Me.Label71)
-        Me.Panel11.Controls.Add(Me.Label72)
-        Me.Panel11.Controls.Add(Me.Label73)
-        Me.Panel11.Location = New System.Drawing.Point(3, 145)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(226, 65)
-        Me.Panel11.TabIndex = 207
-        '
-        'PictureBox20
-        '
-        Me.PictureBox20.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.foto3
-        Me.PictureBox20.Location = New System.Drawing.Point(18, 6)
-        Me.PictureBox20.Name = "PictureBox20"
-        Me.PictureBox20.Size = New System.Drawing.Size(45, 55)
-        Me.PictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox20.TabIndex = 59
-        Me.PictureBox20.TabStop = False
-        '
-        'Label71
-        '
-        Me.Label71.AutoSize = True
-        Me.Label71.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label71.ForeColor = System.Drawing.Color.DimGray
-        Me.Label71.Location = New System.Drawing.Point(67, 44)
-        Me.Label71.Name = "Label71"
-        Me.Label71.Size = New System.Drawing.Size(96, 13)
-        Me.Label71.TabIndex = 62
-        Me.Label71.Text = "21/08/2012  15:34"
-        '
-        'Label72
-        '
-        Me.Label72.AutoSize = True
-        Me.Label72.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label72.ForeColor = System.Drawing.Color.DimGray
-        Me.Label72.Location = New System.Drawing.Point(65, 22)
-        Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(89, 20)
-        Me.Label72.TabIndex = 61
-        Me.Label72.Text = "0919078097"
-        '
-        'Label73
-        '
-        Me.Label73.AutoSize = True
-        Me.Label73.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label73.ForeColor = System.Drawing.Color.Black
-        Me.Label73.Location = New System.Drawing.Point(65, 4)
-        Me.Label73.Name = "Label73"
-        Me.Label73.Size = New System.Drawing.Size(128, 17)
-        Me.Label73.TabIndex = 60
-        Me.Label73.Text = "Marjorie Valdiviezo"
         '
         'Panel12
         '
@@ -3100,7 +2894,7 @@ Partial Class Form1
         Me.Panel12.Controls.Add(Me.Label74)
         Me.Panel12.Controls.Add(Me.Label75)
         Me.Panel12.Controls.Add(Me.Label76)
-        Me.Panel12.Location = New System.Drawing.Point(3, 216)
+        Me.Panel12.Location = New System.Drawing.Point(3, 3)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(226, 65)
         Me.Panel12.TabIndex = 208
@@ -3148,62 +2942,9 @@ Partial Class Form1
         Me.Label76.TabIndex = 60
         Me.Label76.Text = "Marjorie Valdiviezo"
         '
-        'Panel13
-        '
-        Me.Panel13.Controls.Add(Me.PictureBox22)
-        Me.Panel13.Controls.Add(Me.Label77)
-        Me.Panel13.Controls.Add(Me.Label78)
-        Me.Panel13.Controls.Add(Me.Label79)
-        Me.Panel13.Location = New System.Drawing.Point(3, 287)
-        Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(226, 65)
-        Me.Panel13.TabIndex = 209
-        '
-        'PictureBox22
-        '
-        Me.PictureBox22.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.foto2
-        Me.PictureBox22.Location = New System.Drawing.Point(18, 6)
-        Me.PictureBox22.Name = "PictureBox22"
-        Me.PictureBox22.Size = New System.Drawing.Size(45, 55)
-        Me.PictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox22.TabIndex = 59
-        Me.PictureBox22.TabStop = False
-        '
-        'Label77
-        '
-        Me.Label77.AutoSize = True
-        Me.Label77.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label77.ForeColor = System.Drawing.Color.DimGray
-        Me.Label77.Location = New System.Drawing.Point(67, 44)
-        Me.Label77.Name = "Label77"
-        Me.Label77.Size = New System.Drawing.Size(96, 13)
-        Me.Label77.TabIndex = 62
-        Me.Label77.Text = "21/08/2012  15:34"
-        '
-        'Label78
-        '
-        Me.Label78.AutoSize = True
-        Me.Label78.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label78.ForeColor = System.Drawing.Color.DimGray
-        Me.Label78.Location = New System.Drawing.Point(65, 22)
-        Me.Label78.Name = "Label78"
-        Me.Label78.Size = New System.Drawing.Size(89, 20)
-        Me.Label78.TabIndex = 61
-        Me.Label78.Text = "0919078097"
-        '
-        'Label79
-        '
-        Me.Label79.AutoSize = True
-        Me.Label79.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label79.ForeColor = System.Drawing.Color.Black
-        Me.Label79.Location = New System.Drawing.Point(65, 4)
-        Me.Label79.Name = "Label79"
-        Me.Label79.Size = New System.Drawing.Size(128, 17)
-        Me.Label79.TabIndex = 60
-        Me.Label79.Text = "Marjorie Valdiviezo"
-        '
         'Panel8
         '
+        Me.Panel8.Controls.Add(Me.Button8)
         Me.Panel8.Controls.Add(Me.Button4)
         Me.Panel8.Controls.Add(Me.PictureBox17)
         Me.Panel8.Controls.Add(Me.Panel7)
@@ -3217,7 +2958,7 @@ Partial Class Form1
         Me.Panel8.Location = New System.Drawing.Point(0, 0)
         Me.Panel8.MinimumSize = New System.Drawing.Size(200, 0)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(200, 205)
+        Me.Panel8.Size = New System.Drawing.Size(249, 205)
         Me.Panel8.TabIndex = 1
         '
         'Button4
@@ -3566,6 +3307,15 @@ Partial Class Form1
         'PrintDocument1
         '
         '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(207, 177)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(38, 24)
+        Me.Button8.TabIndex = 60
+        Me.Button8.Text = "Button8"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3640,22 +3390,9 @@ Partial Class Form1
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.Panel9.ResumeLayout(False)
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel14.ResumeLayout(False)
-        Me.Panel14.PerformLayout()
-        Me.Panel10.ResumeLayout(False)
-        Me.Panel10.PerformLayout()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel11.ResumeLayout(False)
-        Me.Panel11.PerformLayout()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel12.ResumeLayout(False)
         Me.Panel12.PerformLayout()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel13.ResumeLayout(False)
-        Me.Panel13.PerformLayout()
-        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3839,32 +3576,11 @@ Partial Class Form1
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
-    Friend WithEvents Panel9 As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox18 As System.Windows.Forms.PictureBox
-    Friend WithEvents Panel14 As System.Windows.Forms.Panel
-    Friend WithEvents Label67 As System.Windows.Forms.Label
-    Friend WithEvents Label66 As System.Windows.Forms.Label
-    Friend WithEvents Label65 As System.Windows.Forms.Label
-    Friend WithEvents Panel10 As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox19 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label68 As System.Windows.Forms.Label
-    Friend WithEvents Label69 As System.Windows.Forms.Label
-    Friend WithEvents Label70 As System.Windows.Forms.Label
-    Friend WithEvents Panel11 As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox20 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label71 As System.Windows.Forms.Label
-    Friend WithEvents Label72 As System.Windows.Forms.Label
-    Friend WithEvents Label73 As System.Windows.Forms.Label
     Friend WithEvents Panel12 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox21 As System.Windows.Forms.PictureBox
     Friend WithEvents Label74 As System.Windows.Forms.Label
     Friend WithEvents Label75 As System.Windows.Forms.Label
     Friend WithEvents Label76 As System.Windows.Forms.Label
-    Friend WithEvents Panel13 As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox22 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label77 As System.Windows.Forms.Label
-    Friend WithEvents Label78 As System.Windows.Forms.Label
-    Friend WithEvents Label79 As System.Windows.Forms.Label
     Friend WithEvents Panel8 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox17 As System.Windows.Forms.PictureBox
     Friend WithEvents Panel7 As System.Windows.Forms.Panel
@@ -3950,5 +3666,6 @@ Partial Class Form1
     Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
     Friend WithEvents Button11 As System.Windows.Forms.Button
     Friend WithEvents PageSetupDialog1 As System.Windows.Forms.PageSetupDialog
+    Friend WithEvents Button8 As System.Windows.Forms.Button
 
 End Class

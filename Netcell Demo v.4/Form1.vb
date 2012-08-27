@@ -1277,4 +1277,12 @@ Public Class Form1
     Private Sub Label80_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label80.Click
 
     End Sub
+
+    Private Sub Button8_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+
+    End Sub
+
+    Private Sub Label74_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label74.Click
+
+    End Sub
 End Class
