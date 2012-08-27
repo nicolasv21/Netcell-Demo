@@ -160,6 +160,22 @@ Partial Class Form1
         Me.imprimir = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NacionalidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SexoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LugarnacimientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechanacimientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProfesionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaexpiracionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumeroplasticoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumerochipDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FotoDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.FirmaDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CedulasDBDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CedulasDBDataSet = New Netcell_Demo_v._4.CedulasDBDataSet()
@@ -276,22 +292,6 @@ Partial Class Form1
         Me.lbl_footer_2 = New System.Windows.Forms.Label()
         Me.cedulasTableAdapter = New Netcell_Demo_v._4.CedulasDBDataSetTableAdapters.cedulasTableAdapter()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NacionalidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SexoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LugarnacimientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechanacimientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProfesionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaexpiracionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NumeroplasticoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NumerochipDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FotoDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.FirmaDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         Me.fail.SuspendLayout()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Datos.SuspendLayout()
@@ -1997,7 +1997,7 @@ Partial Class Form1
         Me.imprimir.Controls.Add(Me.Panel1)
         Me.imprimir.Location = New System.Drawing.Point(0, 161)
         Me.imprimir.Name = "imprimir"
-        Me.imprimir.Size = New System.Drawing.Size(618, 337)
+        Me.imprimir.Size = New System.Drawing.Size(918, 337)
         Me.imprimir.TabIndex = 204
         Me.imprimir.Visible = False
         '
@@ -2009,7 +2009,7 @@ Partial Class Form1
         Me.Panel2.Location = New System.Drawing.Point(0, 72)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Padding = New System.Windows.Forms.Padding(10, 0, 15, 5)
-        Me.Panel2.Size = New System.Drawing.Size(618, 265)
+        Me.Panel2.Size = New System.Drawing.Size(918, 265)
         Me.Panel2.TabIndex = 64
         '
         'DataGridView1
@@ -2017,13 +2017,11 @@ Partial Class Form1
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AllowUserToOrderColumns = True
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer))
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
@@ -2033,14 +2031,14 @@ Partial Class Form1
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.ColumnHeadersHeight = 30
+        Me.DataGridView1.ColumnHeadersHeight = 25
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.NacionalidadDataGridViewTextBoxColumn, Me.SexoDataGridViewTextBoxColumn, Me.LugarnacimientoDataGridViewTextBoxColumn, Me.FechanacimientoDataGridViewTextBoxColumn, Me.ProfesionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.FechaexpiracionDataGridViewTextBoxColumn, Me.NumeroplasticoDataGridViewTextBoxColumn, Me.NumerochipDataGridViewTextBoxColumn, Me.FotoDataGridViewImageColumn, Me.FirmaDataGridViewImageColumn})
         Me.DataGridView1.DataSource = Me.BindingSource1
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDark
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
@@ -2050,8 +2048,151 @@ Partial Class Form1
         Me.DataGridView1.Location = New System.Drawing.Point(10, 0)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(593, 260)
+        Me.DataGridView1.Size = New System.Drawing.Size(893, 260)
         Me.DataGridView1.TabIndex = 2
+        '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdDataGridViewTextBoxColumn.Width = 43
+        '
+        'CedulaDataGridViewTextBoxColumn
+        '
+        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "Cédula"
+        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
+        Me.CedulaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CedulaDataGridViewTextBoxColumn.Visible = False
+        Me.CedulaDataGridViewTextBoxColumn.Width = 65
+        '
+        'NombresDataGridViewTextBoxColumn
+        '
+        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
+        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombres"
+        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
+        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombresDataGridViewTextBoxColumn.Visible = False
+        Me.NombresDataGridViewTextBoxColumn.Width = 74
+        '
+        'ApellidosDataGridViewTextBoxColumn
+        '
+        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ApellidosDataGridViewTextBoxColumn.Visible = False
+        Me.ApellidosDataGridViewTextBoxColumn.Width = 74
+        '
+        'NacionalidadDataGridViewTextBoxColumn
+        '
+        Me.NacionalidadDataGridViewTextBoxColumn.DataPropertyName = "nacionalidad"
+        Me.NacionalidadDataGridViewTextBoxColumn.HeaderText = "Nacionalidad"
+        Me.NacionalidadDataGridViewTextBoxColumn.Name = "NacionalidadDataGridViewTextBoxColumn"
+        Me.NacionalidadDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NacionalidadDataGridViewTextBoxColumn.Visible = False
+        Me.NacionalidadDataGridViewTextBoxColumn.Width = 94
+        '
+        'SexoDataGridViewTextBoxColumn
+        '
+        Me.SexoDataGridViewTextBoxColumn.DataPropertyName = "sexo"
+        Me.SexoDataGridViewTextBoxColumn.HeaderText = "Sexo"
+        Me.SexoDataGridViewTextBoxColumn.Name = "SexoDataGridViewTextBoxColumn"
+        Me.SexoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SexoDataGridViewTextBoxColumn.Visible = False
+        Me.SexoDataGridViewTextBoxColumn.Width = 56
+        '
+        'LugarnacimientoDataGridViewTextBoxColumn
+        '
+        Me.LugarnacimientoDataGridViewTextBoxColumn.DataPropertyName = "lugar_nacimiento"
+        Me.LugarnacimientoDataGridViewTextBoxColumn.HeaderText = "Lugar de nacimiento"
+        Me.LugarnacimientoDataGridViewTextBoxColumn.Name = "LugarnacimientoDataGridViewTextBoxColumn"
+        Me.LugarnacimientoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.LugarnacimientoDataGridViewTextBoxColumn.Visible = False
+        Me.LugarnacimientoDataGridViewTextBoxColumn.Width = 128
+        '
+        'FechanacimientoDataGridViewTextBoxColumn
+        '
+        Me.FechanacimientoDataGridViewTextBoxColumn.DataPropertyName = "fecha_nacimiento"
+        Me.FechanacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha de nacimiento"
+        Me.FechanacimientoDataGridViewTextBoxColumn.Name = "FechanacimientoDataGridViewTextBoxColumn"
+        Me.FechanacimientoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FechanacimientoDataGridViewTextBoxColumn.Visible = False
+        Me.FechanacimientoDataGridViewTextBoxColumn.Width = 131
+        '
+        'ProfesionDataGridViewTextBoxColumn
+        '
+        Me.ProfesionDataGridViewTextBoxColumn.DataPropertyName = "profesion"
+        Me.ProfesionDataGridViewTextBoxColumn.HeaderText = "Profesión"
+        Me.ProfesionDataGridViewTextBoxColumn.Name = "ProfesionDataGridViewTextBoxColumn"
+        Me.ProfesionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ProfesionDataGridViewTextBoxColumn.Visible = False
+        Me.ProfesionDataGridViewTextBoxColumn.Width = 76
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Télefono"
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TelefonoDataGridViewTextBoxColumn.Visible = False
+        Me.TelefonoDataGridViewTextBoxColumn.Width = 74
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Dirección"
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        Me.DireccionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DireccionDataGridViewTextBoxColumn.Visible = False
+        Me.DireccionDataGridViewTextBoxColumn.Width = 77
+        '
+        'FechaexpiracionDataGridViewTextBoxColumn
+        '
+        Me.FechaexpiracionDataGridViewTextBoxColumn.DataPropertyName = "fecha_expiracion"
+        Me.FechaexpiracionDataGridViewTextBoxColumn.HeaderText = "Fecha de exppiración"
+        Me.FechaexpiracionDataGridViewTextBoxColumn.Name = "FechaexpiracionDataGridViewTextBoxColumn"
+        Me.FechaexpiracionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FechaexpiracionDataGridViewTextBoxColumn.Visible = False
+        Me.FechaexpiracionDataGridViewTextBoxColumn.Width = 134
+        '
+        'NumeroplasticoDataGridViewTextBoxColumn
+        '
+        Me.NumeroplasticoDataGridViewTextBoxColumn.DataPropertyName = "numero_plastico"
+        Me.NumeroplasticoDataGridViewTextBoxColumn.HeaderText = "Número de plástico"
+        Me.NumeroplasticoDataGridViewTextBoxColumn.Name = "NumeroplasticoDataGridViewTextBoxColumn"
+        Me.NumeroplasticoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NumeroplasticoDataGridViewTextBoxColumn.Visible = False
+        Me.NumeroplasticoDataGridViewTextBoxColumn.Width = 123
+        '
+        'NumerochipDataGridViewTextBoxColumn
+        '
+        Me.NumerochipDataGridViewTextBoxColumn.DataPropertyName = "numero_chip"
+        Me.NumerochipDataGridViewTextBoxColumn.HeaderText = "Número de chip"
+        Me.NumerochipDataGridViewTextBoxColumn.Name = "NumerochipDataGridViewTextBoxColumn"
+        Me.NumerochipDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NumerochipDataGridViewTextBoxColumn.Visible = False
+        Me.NumerochipDataGridViewTextBoxColumn.Width = 107
+        '
+        'FotoDataGridViewImageColumn
+        '
+        Me.FotoDataGridViewImageColumn.DataPropertyName = "foto"
+        Me.FotoDataGridViewImageColumn.HeaderText = "foto"
+        Me.FotoDataGridViewImageColumn.Name = "FotoDataGridViewImageColumn"
+        Me.FotoDataGridViewImageColumn.ReadOnly = True
+        Me.FotoDataGridViewImageColumn.Visible = False
+        Me.FotoDataGridViewImageColumn.Width = 31
+        '
+        'FirmaDataGridViewImageColumn
+        '
+        Me.FirmaDataGridViewImageColumn.DataPropertyName = "firma"
+        Me.FirmaDataGridViewImageColumn.HeaderText = "firma"
+        Me.FirmaDataGridViewImageColumn.Name = "FirmaDataGridViewImageColumn"
+        Me.FirmaDataGridViewImageColumn.ReadOnly = True
+        Me.FirmaDataGridViewImageColumn.Visible = False
+        Me.FirmaDataGridViewImageColumn.Width = 35
         '
         'BindingSource1
         '
@@ -2079,7 +2220,7 @@ Partial Class Form1
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(618, 72)
+        Me.Panel1.Size = New System.Drawing.Size(918, 72)
         Me.Panel1.TabIndex = 63
         '
         'Button8
@@ -2256,7 +2397,6 @@ Partial Class Form1
         Me.Imprimir_ventanas.Panel1.Controls.Add(Me.Label95)
         Me.Imprimir_ventanas.Panel1.Controls.Add(Me.PictureBox24)
         Me.Imprimir_ventanas.Panel1.Controls.Add(Me.Label82)
-        Me.Imprimir_ventanas.Panel1Collapsed = True
         '
         'Imprimir_ventanas.Panel2
         '
@@ -2283,8 +2423,6 @@ Partial Class Form1
         '
         Me.a13.AutoSize = True
         Me.a13.BackColor = System.Drawing.Color.Transparent
-        Me.a13.Checked = True
-        Me.a13.CheckState = System.Windows.Forms.CheckState.Checked
         Me.a13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.a13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.a13.Location = New System.Drawing.Point(43, 346)
@@ -2297,8 +2435,6 @@ Partial Class Form1
         '
         Me.a12.AutoSize = True
         Me.a12.BackColor = System.Drawing.Color.Transparent
-        Me.a12.Checked = True
-        Me.a12.CheckState = System.Windows.Forms.CheckState.Checked
         Me.a12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.a12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.a12.Location = New System.Drawing.Point(43, 325)
@@ -2311,8 +2447,6 @@ Partial Class Form1
         '
         Me.a11.AutoSize = True
         Me.a11.BackColor = System.Drawing.Color.Transparent
-        Me.a11.Checked = True
-        Me.a11.CheckState = System.Windows.Forms.CheckState.Checked
         Me.a11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.a11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.a11.Location = New System.Drawing.Point(43, 305)
@@ -2325,8 +2459,6 @@ Partial Class Form1
         '
         Me.a10.AutoSize = True
         Me.a10.BackColor = System.Drawing.Color.Transparent
-        Me.a10.Checked = True
-        Me.a10.CheckState = System.Windows.Forms.CheckState.Checked
         Me.a10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.a10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.a10.Location = New System.Drawing.Point(43, 284)
@@ -2339,8 +2471,6 @@ Partial Class Form1
         '
         Me.a9.AutoSize = True
         Me.a9.BackColor = System.Drawing.Color.Transparent
-        Me.a9.Checked = True
-        Me.a9.CheckState = System.Windows.Forms.CheckState.Checked
         Me.a9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.a9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.a9.Location = New System.Drawing.Point(43, 265)
@@ -2353,8 +2483,6 @@ Partial Class Form1
         '
         Me.a8.AutoSize = True
         Me.a8.BackColor = System.Drawing.Color.Transparent
-        Me.a8.Checked = True
-        Me.a8.CheckState = System.Windows.Forms.CheckState.Checked
         Me.a8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.a8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.a8.Location = New System.Drawing.Point(43, 244)
@@ -2367,8 +2495,6 @@ Partial Class Form1
         '
         Me.a7.AutoSize = True
         Me.a7.BackColor = System.Drawing.Color.Transparent
-        Me.a7.Checked = True
-        Me.a7.CheckState = System.Windows.Forms.CheckState.Checked
         Me.a7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.a7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.a7.Location = New System.Drawing.Point(43, 224)
@@ -2381,8 +2507,6 @@ Partial Class Form1
         '
         Me.a6.AutoSize = True
         Me.a6.BackColor = System.Drawing.Color.Transparent
-        Me.a6.Checked = True
-        Me.a6.CheckState = System.Windows.Forms.CheckState.Checked
         Me.a6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.a6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.a6.Location = New System.Drawing.Point(43, 204)
@@ -2395,8 +2519,6 @@ Partial Class Form1
         '
         Me.a5.AutoSize = True
         Me.a5.BackColor = System.Drawing.Color.Transparent
-        Me.a5.Checked = True
-        Me.a5.CheckState = System.Windows.Forms.CheckState.Checked
         Me.a5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.a5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.a5.Location = New System.Drawing.Point(43, 184)
@@ -2409,8 +2531,6 @@ Partial Class Form1
         '
         Me.a4.AutoSize = True
         Me.a4.BackColor = System.Drawing.Color.Transparent
-        Me.a4.Checked = True
-        Me.a4.CheckState = System.Windows.Forms.CheckState.Checked
         Me.a4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.a4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.a4.Location = New System.Drawing.Point(43, 164)
@@ -2423,8 +2543,6 @@ Partial Class Form1
         '
         Me.a3.AutoSize = True
         Me.a3.BackColor = System.Drawing.Color.Transparent
-        Me.a3.Checked = True
-        Me.a3.CheckState = System.Windows.Forms.CheckState.Checked
         Me.a3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.a3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.a3.Location = New System.Drawing.Point(43, 143)
@@ -2437,8 +2555,6 @@ Partial Class Form1
         '
         Me.a2.AutoSize = True
         Me.a2.BackColor = System.Drawing.Color.Transparent
-        Me.a2.Checked = True
-        Me.a2.CheckState = System.Windows.Forms.CheckState.Checked
         Me.a2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.a2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.a2.Location = New System.Drawing.Point(43, 123)
@@ -2451,8 +2567,6 @@ Partial Class Form1
         '
         Me.a1.AutoSize = True
         Me.a1.BackColor = System.Drawing.Color.Transparent
-        Me.a1.Checked = True
-        Me.a1.CheckState = System.Windows.Forms.CheckState.Checked
         Me.a1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.a1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.a1.Location = New System.Drawing.Point(43, 103)
@@ -3434,134 +3548,6 @@ Partial Class Form1
         'Timer2
         '
         Me.Timer2.Interval = 1
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdDataGridViewTextBoxColumn.Width = 39
-        '
-        'CedulaDataGridViewTextBoxColumn
-        '
-        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "Cédula"
-        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "Cédula"
-        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
-        Me.CedulaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CedulaDataGridViewTextBoxColumn.Width = 40
-        '
-        'NombresDataGridViewTextBoxColumn
-        '
-        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres"
-        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombres"
-        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
-        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombresDataGridViewTextBoxColumn.Width = 39
-        '
-        'ApellidosDataGridViewTextBoxColumn
-        '
-        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
-        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ApellidosDataGridViewTextBoxColumn.Width = 40
-        '
-        'NacionalidadDataGridViewTextBoxColumn
-        '
-        Me.NacionalidadDataGridViewTextBoxColumn.DataPropertyName = "País"
-        Me.NacionalidadDataGridViewTextBoxColumn.HeaderText = "Nacionalidad"
-        Me.NacionalidadDataGridViewTextBoxColumn.Name = "NacionalidadDataGridViewTextBoxColumn"
-        Me.NacionalidadDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NacionalidadDataGridViewTextBoxColumn.Width = 39
-        '
-        'SexoDataGridViewTextBoxColumn
-        '
-        Me.SexoDataGridViewTextBoxColumn.DataPropertyName = "Sexo"
-        Me.SexoDataGridViewTextBoxColumn.HeaderText = "Sexo"
-        Me.SexoDataGridViewTextBoxColumn.Name = "SexoDataGridViewTextBoxColumn"
-        Me.SexoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.SexoDataGridViewTextBoxColumn.Width = 40
-        '
-        'LugarnacimientoDataGridViewTextBoxColumn
-        '
-        Me.LugarnacimientoDataGridViewTextBoxColumn.DataPropertyName = "Lugar de nacimiento"
-        Me.LugarnacimientoDataGridViewTextBoxColumn.HeaderText = "Lugar de nacimiento"
-        Me.LugarnacimientoDataGridViewTextBoxColumn.Name = "LugarnacimientoDataGridViewTextBoxColumn"
-        Me.LugarnacimientoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.LugarnacimientoDataGridViewTextBoxColumn.Width = 39
-        '
-        'FechanacimientoDataGridViewTextBoxColumn
-        '
-        Me.FechanacimientoDataGridViewTextBoxColumn.DataPropertyName = "Fecha de nacimiento"
-        Me.FechanacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha de nacimiento"
-        Me.FechanacimientoDataGridViewTextBoxColumn.Name = "FechanacimientoDataGridViewTextBoxColumn"
-        Me.FechanacimientoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.FechanacimientoDataGridViewTextBoxColumn.Width = 39
-        '
-        'ProfesionDataGridViewTextBoxColumn
-        '
-        Me.ProfesionDataGridViewTextBoxColumn.DataPropertyName = "Profesión"
-        Me.ProfesionDataGridViewTextBoxColumn.HeaderText = "Profesión"
-        Me.ProfesionDataGridViewTextBoxColumn.Name = "ProfesionDataGridViewTextBoxColumn"
-        Me.ProfesionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ProfesionDataGridViewTextBoxColumn.Width = 40
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "Télefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Télefono"
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TelefonoDataGridViewTextBoxColumn.Width = 39
-        '
-        'DireccionDataGridViewTextBoxColumn
-        '
-        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "Dirección"
-        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Dirección"
-        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
-        Me.DireccionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DireccionDataGridViewTextBoxColumn.Width = 40
-        '
-        'FechaexpiracionDataGridViewTextBoxColumn
-        '
-        Me.FechaexpiracionDataGridViewTextBoxColumn.DataPropertyName = "Fecha de expiración"
-        Me.FechaexpiracionDataGridViewTextBoxColumn.HeaderText = "Fecha de expiración"
-        Me.FechaexpiracionDataGridViewTextBoxColumn.Name = "FechaexpiracionDataGridViewTextBoxColumn"
-        Me.FechaexpiracionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.FechaexpiracionDataGridViewTextBoxColumn.Width = 39
-        '
-        'NumeroplasticoDataGridViewTextBoxColumn
-        '
-        Me.NumeroplasticoDataGridViewTextBoxColumn.DataPropertyName = "Número de plástico"
-        Me.NumeroplasticoDataGridViewTextBoxColumn.HeaderText = "Número de plástico"
-        Me.NumeroplasticoDataGridViewTextBoxColumn.Name = "NumeroplasticoDataGridViewTextBoxColumn"
-        Me.NumeroplasticoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NumeroplasticoDataGridViewTextBoxColumn.Width = 40
-        '
-        'NumerochipDataGridViewTextBoxColumn
-        '
-        Me.NumerochipDataGridViewTextBoxColumn.DataPropertyName = "Número de chip"
-        Me.NumerochipDataGridViewTextBoxColumn.HeaderText = "Número de chip"
-        Me.NumerochipDataGridViewTextBoxColumn.Name = "NumerochipDataGridViewTextBoxColumn"
-        Me.NumerochipDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NumerochipDataGridViewTextBoxColumn.Width = 39
-        '
-        'FotoDataGridViewImageColumn
-        '
-        Me.FotoDataGridViewImageColumn.DataPropertyName = "foto"
-        Me.FotoDataGridViewImageColumn.HeaderText = "foto"
-        Me.FotoDataGridViewImageColumn.Name = "FotoDataGridViewImageColumn"
-        Me.FotoDataGridViewImageColumn.ReadOnly = True
-        Me.FotoDataGridViewImageColumn.Visible = False
-        '
-        'FirmaDataGridViewImageColumn
-        '
-        Me.FirmaDataGridViewImageColumn.DataPropertyName = "firma"
-        Me.FirmaDataGridViewImageColumn.HeaderText = "firma"
-        Me.FirmaDataGridViewImageColumn.Name = "FirmaDataGridViewImageColumn"
-        Me.FirmaDataGridViewImageColumn.ReadOnly = True
-        Me.FirmaDataGridViewImageColumn.Visible = False
         '
         'Form1
         '

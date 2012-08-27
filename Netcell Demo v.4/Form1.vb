@@ -19,7 +19,7 @@ Public Class Form1
     Private WSQ_library_native_methods As WSQImageLibraryNativeMethods
     Dim myUtil As Util
     Dim hbitmap As IntPtr
-
+    Dim tableiniatilize As Boolean = False
     Dim huellagemalto() As Byte
     Dim messageText As String = String.Empty
     Dim icaoAuthentityResult As IcaoAuthentityResult = IcaoAuthentityResult.PassedAll
@@ -455,7 +455,7 @@ Public Class Form1
         activar_lector()
         activar_biometrico()
         Me.ReportViewer1.RefreshReport()
-
+        tabla_settings()
     End Sub
     Private Sub otiIcao1_OnFileBlockProcessed()
         Application.DoEvents()
@@ -1050,96 +1050,173 @@ Public Class Form1
     Private Sub a1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a1.CheckedChanged
         If a1.Checked = False Then
             DataGridView1.Columns.Item(1).Visible = False
+            My.Settings.Tabla_cedula = 0
         Else
             DataGridView1.Columns.Item(1).Visible = True
+            My.Settings.Tabla_cedula = 1
         End If
     End Sub
 
     Private Sub a2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a2.CheckedChanged
         If a2.Checked = False Then
             DataGridView1.Columns.Item(2).Visible = False
+            My.Settings.Tabla_nombres = 0
         Else
             DataGridView1.Columns.Item(2).Visible = True
+            My.Settings.Tabla_nombres = 1
         End If
     End Sub
     Private Sub a3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a3.CheckedChanged
         If a3.Checked = False Then
             DataGridView1.Columns.Item(3).Visible = False
+            My.Settings.Tabla_apellidos = 0
         Else
             DataGridView1.Columns.Item(3).Visible = True
+            My.Settings.Tabla_apellidos = 1
         End If
     End Sub
     Private Sub a4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a4.CheckedChanged
         If a4.Checked = False Then
             DataGridView1.Columns.Item(4).Visible = False
+            My.Settings.Tabla_nacionalidad = 0
         Else
             DataGridView1.Columns.Item(4).Visible = True
+            My.Settings.Tabla_nacionalidad = 1
         End If
     End Sub
     Private Sub a5_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a5.CheckedChanged
         If a5.Checked = False Then
             DataGridView1.Columns.Item(5).Visible = False
+            My.Settings.Tabla_sexo = 0
         Else
             DataGridView1.Columns.Item(5).Visible = True
+            My.Settings.Tabla_sexo = 1
         End If
     End Sub
     Private Sub a6_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a6.CheckedChanged
         If a6.Checked = False Then
             DataGridView1.Columns.Item(6).Visible = False
+            My.Settings.Tabla_lugar_nacimiento = 0
         Else
             DataGridView1.Columns.Item(6).Visible = True
+            My.Settings.Tabla_lugar_nacimiento = 1
         End If
     End Sub
     Private Sub a7_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a7.CheckedChanged
         If a7.Checked = False Then
             DataGridView1.Columns.Item(7).Visible = False
+            My.Settings.Tabla_fecha_nacimiento = 0
         Else
             DataGridView1.Columns.Item(7).Visible = True
+            My.Settings.Tabla_fecha_nacimiento = 1
         End If
     End Sub
     Private Sub a8_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a8.CheckedChanged
         If a8.Checked = False Then
             DataGridView1.Columns.Item(8).Visible = False
+            My.Settings.Tabla_profesion = 0
         Else
             DataGridView1.Columns.Item(8).Visible = True
+            My.Settings.Tabla_profesion = 1
         End If
     End Sub
     Private Sub a9_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a9.CheckedChanged
         If a9.Checked = False Then
             DataGridView1.Columns.Item(9).Visible = False
+            My.Settings.Tabla_telefono = 0
         Else
             DataGridView1.Columns.Item(9).Visible = True
+            My.Settings.Tabla_telefono = 1
         End If
     End Sub
     Private Sub a10_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a10.CheckedChanged
         If a10.Checked = False Then
             DataGridView1.Columns.Item(10).Visible = False
+            My.Settings.Tabla_direccion = 0
         Else
             DataGridView1.Columns.Item(10).Visible = True
+            My.Settings.Tabla_direccion = 1
         End If
     End Sub
     Private Sub a11_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a11.CheckedChanged
         If a11.Checked = False Then
             DataGridView1.Columns.Item(11).Visible = False
+            My.Settings.Tabla_fecha_expiracion = 0
         Else
             DataGridView1.Columns.Item(11).Visible = True
+            My.Settings.Tabla_fecha_expiracion = 1
         End If
     End Sub
     Private Sub a12_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a12.CheckedChanged
         If a12.Checked = False Then
             DataGridView1.Columns.Item(12).Visible = False
+            My.Settings.Tabla_numero_plastico = 0
         Else
             DataGridView1.Columns.Item(12).Visible = True
+            My.Settings.Tabla_numero_plastico = 1
         End If
     End Sub
     Private Sub a13_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles a13.CheckedChanged
         If a13.Checked = False Then
             DataGridView1.Columns.Item(13).Visible = False
+            My.Settings.Tabla_numero_chip = 0
         Else
-            DataGridView1.Columns.Item(2).Visible = True
+            DataGridView1.Columns.Item(13).Visible = True
+            My.Settings.Tabla_numero_chip = 1
         End If
     End Sub
+    Function tabla_settings()
+        If My.Settings.Tabla_cedula = 1 Then a1.Checked = True Else a1.Checked = False
+        If My.Settings.Tabla_nombres = 1 Then a2.Checked = True Else a2.Checked = False
+        If My.Settings.Tabla_apellidos = 1 Then a3.Checked = True Else a3.Checked = False
+        If My.Settings.Tabla_nacionalidad = 1 Then a4.Checked = True Else a4.Checked = False
+        If My.Settings.Tabla_sexo = 1 Then a5.Checked = True Else a5.Checked = False
+        If My.Settings.Tabla_lugar_nacimiento = 1 Then a6.Checked = True Else a6.Checked = False
+        If My.Settings.Tabla_fecha_nacimiento = 1 Then a7.Checked = True Else a7.Checked = False
+        If My.Settings.Tabla_profesion = 1 Then a8.Checked = True Else a8.Checked = False
+        If My.Settings.Tabla_telefono = 1 Then a9.Checked = True Else a9.Checked = False
+        If My.Settings.Tabla_direccion = 1 Then a10.Checked = True Else a10.Checked = False
+        If My.Settings.Tabla_fecha_expiracion = 1 Then a11.Checked = True Else a11.Checked = False
+        If My.Settings.Tabla_numero_plastico = 1 Then a12.Checked = True Else a12.Checked = False
+        If My.Settings.Tabla_numero_chip = 1 Then a13.Checked = True Else a13.Checked = False
+        DataGridView1.Columns.Item(1).Width = My.Settings.Tabla_cedula_ancho
+        DataGridView1.Columns.Item(2).Width = My.Settings.Tabla_nombres_ancho
+        DataGridView1.Columns.Item(3).Width = My.Settings.Tabla_apellidos_ancho
+        DataGridView1.Columns.Item(4).Width = My.Settings.Tabla_nacionalidad_ancho
+        DataGridView1.Columns.Item(5).Width = My.Settings.Tabla_sexo_ancho
+        DataGridView1.Columns.Item(6).Width = My.Settings.Tabla_lugar_nacimiento_ancho
+        DataGridView1.Columns.Item(7).Width = My.Settings.Tabla_fecha_nacimiento_ancho
+        DataGridView1.Columns.Item(8).Width = My.Settings.Tabla_profesion_ancho
+        DataGridView1.Columns.Item(9).Width = My.Settings.Tabla_telefono_ancho
+        DataGridView1.Columns.Item(10).Width = My.Settings.Tabla_direccion_ancho
+        DataGridView1.Columns.Item(11).Width = My.Settings.Tabla_fecha_expiracion_ancho
+        DataGridView1.Columns.Item(12).Width = My.Settings.Tabla_numero_plastico_ancho
+        DataGridView1.Columns.Item(13).Width = My.Settings.Tabla_numero_chip_ancho
 
-   
+        tableiniatilize = True
+    End Function
 
+
+
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub DataGridView1_ColumnWidthChanged(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewColumnEventArgs) Handles DataGridView1.ColumnWidthChanged
+        If tableiniatilize = True Then
+            If e.Column.Index = 1 Then My.Settings.Tabla_cedula_ancho = e.Column.Width
+            If e.Column.Index = 2 Then My.Settings.Tabla_nombres_ancho = e.Column.Width
+            If e.Column.Index = 3 Then My.Settings.Tabla_apellidos_ancho = e.Column.Width
+            If e.Column.Index = 4 Then My.Settings.Tabla_nacionalidad_ancho = e.Column.Width
+            If e.Column.Index = 5 Then My.Settings.Tabla_sexo_ancho = e.Column.Width
+            If e.Column.Index = 6 Then My.Settings.Tabla_lugar_nacimiento_ancho = e.Column.Width
+            If e.Column.Index = 7 Then My.Settings.Tabla_fecha_nacimiento_ancho = e.Column.Width
+            If e.Column.Index = 8 Then My.Settings.Tabla_profesion_ancho = e.Column.Width
+            If e.Column.Index = 9 Then My.Settings.Tabla_telefono_ancho = e.Column.Width
+            If e.Column.Index = 10 Then My.Settings.Tabla_direccion_ancho = e.Column.Width
+            If e.Column.Index = 11 Then My.Settings.Tabla_fecha_expiracion_ancho = e.Column.Width
+            If e.Column.Index = 12 Then My.Settings.Tabla_numero_plastico_ancho = e.Column.Width
+            If e.Column.Index = 13 Then My.Settings.Tabla_numero_chip_ancho = e.Column.Width
+        End If
+    End Sub
 End Class

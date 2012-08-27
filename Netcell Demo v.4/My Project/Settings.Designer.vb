@@ -63,6 +63,330 @@ Namespace My
                 Return CType(Me("CedulasDBConnectionString1"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property Tabla_id() As Integer
+            Get
+                Return CType(Me("Tabla_id"),Integer)
+            End Get
+            Set
+                Me("Tabla_id") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property Tabla_cedula() As Integer
+            Get
+                Return CType(Me("Tabla_cedula"),Integer)
+            End Get
+            Set
+                Me("Tabla_cedula") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property Tabla_nombres() As Integer
+            Get
+                Return CType(Me("Tabla_nombres"),Integer)
+            End Get
+            Set
+                Me("Tabla_nombres") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property Tabla_apellidos() As Integer
+            Get
+                Return CType(Me("Tabla_apellidos"),Integer)
+            End Get
+            Set
+                Me("Tabla_apellidos") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property Tabla_nacionalidad() As Integer
+            Get
+                Return CType(Me("Tabla_nacionalidad"),Integer)
+            End Get
+            Set
+                Me("Tabla_nacionalidad") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property Tabla_sexo() As Integer
+            Get
+                Return CType(Me("Tabla_sexo"),Integer)
+            End Get
+            Set
+                Me("Tabla_sexo") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property Tabla_lugar_nacimiento() As Integer
+            Get
+                Return CType(Me("Tabla_lugar_nacimiento"),Integer)
+            End Get
+            Set
+                Me("Tabla_lugar_nacimiento") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property Tabla_fecha_nacimiento() As Integer
+            Get
+                Return CType(Me("Tabla_fecha_nacimiento"),Integer)
+            End Get
+            Set
+                Me("Tabla_fecha_nacimiento") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property Tabla_profesion() As Integer
+            Get
+                Return CType(Me("Tabla_profesion"),Integer)
+            End Get
+            Set
+                Me("Tabla_profesion") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property Tabla_telefono() As Integer
+            Get
+                Return CType(Me("Tabla_telefono"),Integer)
+            End Get
+            Set
+                Me("Tabla_telefono") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property Tabla_direccion() As Integer
+            Get
+                Return CType(Me("Tabla_direccion"),Integer)
+            End Get
+            Set
+                Me("Tabla_direccion") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property Tabla_fecha_expiracion() As Integer
+            Get
+                Return CType(Me("Tabla_fecha_expiracion"),Integer)
+            End Get
+            Set
+                Me("Tabla_fecha_expiracion") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property Tabla_numero_plastico() As Integer
+            Get
+                Return CType(Me("Tabla_numero_plastico"),Integer)
+            End Get
+            Set
+                Me("Tabla_numero_plastico") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property Tabla_numero_chip() As Integer
+            Get
+                Return CType(Me("Tabla_numero_chip"),Integer)
+            End Get
+            Set
+                Me("Tabla_numero_chip") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property Tabla_cedula_ancho() As Integer
+            Get
+                Return CType(Me("Tabla_cedula_ancho"),Integer)
+            End Get
+            Set
+                Me("Tabla_cedula_ancho") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property Tabla_nombres_ancho() As Integer
+            Get
+                Return CType(Me("Tabla_nombres_ancho"),Integer)
+            End Get
+            Set
+                Me("Tabla_nombres_ancho") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property Tabla_apellidos_ancho() As Integer
+            Get
+                Return CType(Me("Tabla_apellidos_ancho"),Integer)
+            End Get
+            Set
+                Me("Tabla_apellidos_ancho") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property Tabla_nacionalidad_ancho() As Integer
+            Get
+                Return CType(Me("Tabla_nacionalidad_ancho"),Integer)
+            End Get
+            Set
+                Me("Tabla_nacionalidad_ancho") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property Tabla_sexo_ancho() As Integer
+            Get
+                Return CType(Me("Tabla_sexo_ancho"),Integer)
+            End Get
+            Set
+                Me("Tabla_sexo_ancho") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property Tabla_lugar_nacimiento_ancho() As Integer
+            Get
+                Return CType(Me("Tabla_lugar_nacimiento_ancho"),Integer)
+            End Get
+            Set
+                Me("Tabla_lugar_nacimiento_ancho") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property Tabla_fecha_nacimiento_ancho() As Integer
+            Get
+                Return CType(Me("Tabla_fecha_nacimiento_ancho"),Integer)
+            End Get
+            Set
+                Me("Tabla_fecha_nacimiento_ancho") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property Tabla_profesion_ancho() As Integer
+            Get
+                Return CType(Me("Tabla_profesion_ancho"),Integer)
+            End Get
+            Set
+                Me("Tabla_profesion_ancho") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property Tabla_telefono_ancho() As Integer
+            Get
+                Return CType(Me("Tabla_telefono_ancho"),Integer)
+            End Get
+            Set
+                Me("Tabla_telefono_ancho") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property Tabla_direccion_ancho() As Integer
+            Get
+                Return CType(Me("Tabla_direccion_ancho"),Integer)
+            End Get
+            Set
+                Me("Tabla_direccion_ancho") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property Tabla_fecha_expiracion_ancho() As Integer
+            Get
+                Return CType(Me("Tabla_fecha_expiracion_ancho"),Integer)
+            End Get
+            Set
+                Me("Tabla_fecha_expiracion_ancho") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property Tabla_numero_plastico_ancho() As Integer
+            Get
+                Return CType(Me("Tabla_numero_plastico_ancho"),Integer)
+            End Get
+            Set
+                Me("Tabla_numero_plastico_ancho") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property Tabla_numero_chip_ancho() As Integer
+            Get
+                Return CType(Me("Tabla_numero_chip_ancho"),Integer)
+            End Get
+            Set
+                Me("Tabla_numero_chip_ancho") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
