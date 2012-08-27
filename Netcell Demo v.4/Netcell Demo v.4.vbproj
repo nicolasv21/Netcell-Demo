@@ -151,6 +151,7 @@
     <Compile Include="CedulasDBDataSet.vb">
       <DependentUpon>CedulasDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataGridViewPrinter.vb" />
     <Compile Include="DBClass.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>

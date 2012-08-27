@@ -5,9 +5,12 @@ Imports System.IO
 Imports GrFingerXLib
 Imports System.Data
 Imports System.Data.SQLite
+Imports System.Drawing.Printing
+
 
 
 Public Class Form1
+    Dim MyDataGridViewPrinter As DataGridViewPrinter
     Dim CONNECTION_STR As String = "Data Source=c:\Netcell\DB\CedulasDB.db;Version=3;"
     Private PersonalData As PersonalData = Nothing
     Dim ventana_regresar As Panel
@@ -22,7 +25,7 @@ Public Class Form1
     Dim tableiniatilize As Boolean = False
     Dim huellagemalto() As Byte
     Dim messageText As String = String.Empty
-    Dim icaoAuthentityResult As IcaoAuthentityResult = IcaoAuthentityResult.PassedAll
+    Dim icaoAuthentityResult As IcaoAuthentityResult = icaoAuthentityResult.PassedAll
     Dim firstName As String = String.Empty
     Dim lastName As String = String.Empty
     Dim dateOfBirth As String = String.Empty
@@ -173,7 +176,7 @@ Public Class Form1
             ventana_actual = Ventana
         End If
         Return False
-      
+
 
     End Function
     Private Function activar_lector()
@@ -567,7 +570,7 @@ Public Class Form1
 
 
 
- 
+
 
     Private Sub AxGrFingerXCtrl1_ImageAcquired1(ByVal sender As Object, ByVal e As AxGrFingerXLib._IGrFingerXCtrlEvents_ImageAcquiredEvent) Handles AxGrFingerXCtrl1.ImageAcquired
         ' Copying aquired image
@@ -783,16 +786,16 @@ Public Class Form1
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-   
+
 
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-      
+
     End Sub
 
     Private Sub Button5_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    
+
     End Sub
 
     Private Sub txt_cedula_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cedula.GotFocus
@@ -1018,7 +1021,7 @@ Public Class Form1
         Me.Timer2.Enabled = False
     End Sub
 
-   
+
     Private Sub Label82_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label82.Click
 
     End Sub
@@ -1036,7 +1039,7 @@ Public Class Form1
         End If
     End Sub
 
-   
+
 
     Private Sub Button11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
@@ -1218,5 +1221,60 @@ Public Class Form1
             If e.Column.Index = 12 Then My.Settings.Tabla_numero_plastico_ancho = e.Column.Width
             If e.Column.Index = 13 Then My.Settings.Tabla_numero_chip_ancho = e.Column.Width
         End If
+    End Sub
+
+
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        If SetupThePrinting() Then PrintDocument1.Print()
+    End Sub
+
+    Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        Dim more As Boolean
+
+        Try
+            more = MyDataGridViewPrinter.DrawDataGridView(e.Graphics)
+            If more Then e.HasMorePages = True
+        Catch Ex As Exception
+            MessageBox.Show(Ex.Message & vbCrLf & Ex.StackTrace, "prueba", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Function SetupThePrinting() As Boolean
+        Dim MyPrintDialog As PrintDialog = New PrintDialog()
+
+        MyPrintDialog.AllowCurrentPage = False
+        MyPrintDialog.AllowPrintToFile = False
+        MyPrintDialog.AllowSelection = False
+        MyPrintDialog.AllowSomePages = True
+        MyPrintDialog.PrintToFile = False
+        MyPrintDialog.ShowHelp = False
+        MyPrintDialog.ShowNetwork = False
+        MyPrintDialog.PrinterSettings.DefaultPageSettings.Landscape = True
+        If MyPrintDialog.ShowDialog() <> System.Windows.Forms.DialogResult.OK Then Return False
+
+        PrintDocument1.DocumentName = "REPORTE / Listado"
+        PrintDocument1.PrinterSettings = MyPrintDialog.PrinterSettings
+        PrintDocument1.DefaultPageSettings = MyPrintDialog.PrinterSettings.DefaultPageSettings
+        PrintDocument1.DefaultPageSettings.Margins = New Margins(40, 40, 40, 40)
+
+        If MessageBox.Show("Do you want the report to be centered on the page", "InvoiceManager - Center on Page", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            MyDataGridViewPrinter = New DataGridViewPrinter(DataGridView1, PrintDocument1, True, True, "REPORTE / Listado", New Font("Tahoma", 18, FontStyle.Bold, GraphicsUnit.Point), Color.Black, True)
+        Else
+            MyDataGridViewPrinter = New DataGridViewPrinter(DataGridView1, PrintDocument1, False, True, "REPORTE / Listado", New Font("Tahoma", 18, FontStyle.Bold, GraphicsUnit.Point), Color.Black, True)
+        End If
+
+        Return True
+    End Function
+  
+    Private Sub Button11_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button11.Click
+        If SetupThePrinting() Then
+            Dim MyPrintPreviewDialog As PrintPreviewDialog = New PrintPreviewDialog()
+            MyPrintPreviewDialog.Document = PrintDocument1
+            MyPrintPreviewDialog.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub Label80_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label80.Click
+
     End Sub
 End Class
