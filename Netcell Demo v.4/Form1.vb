@@ -455,16 +455,17 @@ Public Class Form1
         End If
     End Function
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'CedulasDBDataSet.cedulas' table. You can move, or remove it, as needed.
-        Me.cedulasTableAdapter.Fill(Me.CedulasDBDataSet.cedulas)
-        'TODO: This line of code loads data into the 'CedulasDBDataSet.cedulas' table. You can move, or remove it, as needed.
-
+        'TODO: This line of code loads data into the 'DBDataSet2.cedulas' table. You can move, or remove it, as needed.
+        Me.CedulasTableAdapter.Fill(Me.DBDataSet2.cedulas)
+        'TODO: This line of code loads data into the 'DBDataSet1.cedulas' table. You can move, or remove it, as needed.
+        Me.CedulasTableAdapter1.Fill(Me.DBDataSet1.cedulas)
+       
         ventana_actual = Header
         activar_lector()
         activar_biometrico()
         Me.ReportViewer1.RefreshReport()
         tabla_settings()
-        Me.ReportViewer2.RefreshReport()
+
     End Sub
     Private Sub otiIcao1_OnFileBlockProcessed()
         Application.DoEvents()
@@ -972,7 +973,7 @@ Public Class Form1
         If fecha_expiracion_param = "%" & txt_fecha_expiracion.Tag & "%" Then fecha_expiracion_param = "%%"
         If numero_plastico_param = "%" & txt_numero_plastico.Tag & "%" Then numero_plastico_param = "%%"
         If numero_chip_param = "%" & txt_numero_chip.Tag & "%" Then numero_chip_param = "%%"
-        Me.cedulasTableAdapter.Buscar(Me.CedulasDBDataSet.cedulas, cedula_param, nombres_param, apellidos_param, nacionalidad_param, sexo_param, lugar_nacimiento_param, fecha_nacimiento_param, profesion_param, telefono_param, direccion_param, fecha_expiracion_param, numero_plastico_param, numero_chip_param)
+        Me.CedulasTableAdapter1.FillBy(Me.DBDataSet1.cedulas, cedula_param, nombres_param, apellidos_param, nacionalidad_param, sexo_param, lugar_nacimiento_param, fecha_nacimiento_param, profesion_param, telefono_param, direccion_param, fecha_expiracion_param, numero_plastico_param, numero_chip_param)
         Return True
     End Function
 
@@ -1202,9 +1203,19 @@ Public Class Form1
         tableiniatilize = True
     End Function
 
-
+   
 
     Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        If e.ColumnIndex = 1 Then
+            Dim i As Integer = Me.DataGridView1.CurrentRow.Index
+            Dim dato As String = Me.DataGridView1.Item(0, i).Value
+
+            Me.CedulasTableAdapter.Adapter.SelectCommand.CommandText = "Select * from cedulas where id=" + dato
+            Me.CedulasTableAdapter.Fill(Me.DBDataSet2.cedulas)
+            Me.ReportViewer2.RefreshReport()
+            abrir(Reporte_interno)
+        End If
+
 
     End Sub
 
@@ -1268,7 +1279,7 @@ Public Class Form1
 
         Return True
     End Function
-  
+
     Private Sub Button11_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button11.Click
         If SetupThePrinting() Then
             Dim MyPrintPreviewDialog As PrintPreviewDialog = New PrintPreviewDialog()
@@ -1290,6 +1301,6 @@ Public Class Form1
     End Sub
 
     Private Sub Button15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button15.Click
-        abrir(Report)
+        abrir(imprimir)
     End Sub
 End Class

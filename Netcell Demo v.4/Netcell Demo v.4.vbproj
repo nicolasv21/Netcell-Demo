@@ -143,16 +143,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="CedulasDBDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CedulasDBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="CedulasDBDataSet.vb">
-      <DependentUpon>CedulasDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DataGridViewPrinter.vb" />
     <Compile Include="DBClass.vb" />
+    <Compile Include="DBDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -195,16 +197,27 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="CedulasDBDataSet.xsc">
-      <DependentUpon>CedulasDBDataSet.xsd</DependentUpon>
+    <None Include="DBDataSet1.xsc">
+      <DependentUpon>DBDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="CedulasDBDataSet.xsd">
+    <None Include="DBDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CedulasDBDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>DBDataSet1.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="CedulasDBDataSet.xss">
-      <DependentUpon>CedulasDBDataSet.xsd</DependentUpon>
+    <None Include="DBDataSet1.xss">
+      <DependentUpon>DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DBDataSet2.xsc">
+      <DependentUpon>DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBDataSet2.xss">
+      <DependentUpon>DBDataSet2.xsd</DependentUpon>
     </None>
     <None Include="My Project\app.manifest">
       <SubType>Designer</SubType>
