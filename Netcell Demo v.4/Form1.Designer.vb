@@ -24,10 +24,11 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Dim ReportDataSource6 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ReportDataSource7 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ReportDataSource8 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.loglist = New System.Windows.Forms.ListBox()
         Me.fail = New System.Windows.Forms.Panel()
         Me.Label55 = New System.Windows.Forms.Label()
@@ -160,22 +161,6 @@ Partial Class Form1
         Me.imprimir = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NacionalidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SexoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LugarnacimientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechanacimientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProfesionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaexpiracionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NumeroplasticoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NumerochipDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FotoDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.FirmaDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CedulasDBDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CedulasDBDataSet = New Netcell_Demo_v._4.CedulasDBDataSet()
@@ -240,7 +225,28 @@ Partial Class Form1
         Me.Label74 = New System.Windows.Forms.Label()
         Me.Label75 = New System.Windows.Forms.Label()
         Me.Label76 = New System.Windows.Forms.Label()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
+        Me.Label65 = New System.Windows.Forms.Label()
+        Me.Label66 = New System.Windows.Forms.Label()
+        Me.Label67 = New System.Windows.Forms.Label()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
+        Me.Label68 = New System.Windows.Forms.Label()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.Label70 = New System.Windows.Forms.Label()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
+        Me.Label71 = New System.Windows.Forms.Label()
+        Me.Label72 = New System.Windows.Forms.Label()
+        Me.Label73 = New System.Windows.Forms.Label()
+        Me.Panel13 = New System.Windows.Forms.Panel()
+        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
+        Me.Label77 = New System.Windows.Forms.Label()
+        Me.Label78 = New System.Windows.Forms.Label()
+        Me.Label79 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.PictureBox17 = New System.Windows.Forms.PictureBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -274,7 +280,29 @@ Partial Class Form1
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cedula = New System.Windows.Forms.DataGridViewLinkColumn()
+        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NacionalidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SexoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LugarnacimientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechanacimientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProfesionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaexpiracionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumeroplasticoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumerochipDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FotoDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.FirmaDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Reporte_interno = New System.Windows.Forms.Panel()
+        Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.Label96 = New System.Windows.Forms.Label()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.ReportViewer2 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.fail.SuspendLayout()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Datos.SuspendLayout()
@@ -326,6 +354,14 @@ Partial Class Form1
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel12.SuspendLayout()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel9.SuspendLayout()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel10.SuspendLayout()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel11.SuspendLayout()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel13.SuspendLayout()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
@@ -340,6 +376,9 @@ Partial Class Form1
         Me.FlowLayoutPanel2.SuspendLayout()
         Me.Panel17.SuspendLayout()
         Me.Panel15.SuspendLayout()
+        Me.Reporte_interno.SuspendLayout()
+        Me.Panel16.SuspendLayout()
+        Me.Panel19.SuspendLayout()
         Me.SuspendLayout()
         '
         'loglist
@@ -1245,10 +1284,9 @@ Partial Class Form1
         Me.Header.Controls.Add(Me.Label3)
         Me.Header.Controls.Add(Me.Label2)
         Me.Header.Controls.Add(Me.Label1)
-        Me.Header.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Header.Location = New System.Drawing.Point(0, 0)
+        Me.Header.Location = New System.Drawing.Point(416, 10)
         Me.Header.Name = "Header"
-        Me.Header.Size = New System.Drawing.Size(935, 498)
+        Me.Header.Size = New System.Drawing.Size(37, 34)
         Me.Header.TabIndex = 197
         '
         'Label26
@@ -1787,9 +1825,9 @@ Partial Class Form1
         'ReportViewer1
         '
         Me.ReportViewer1.DocumentMapWidth = 71
-        ReportDataSource6.Name = "DataSet1"
-        ReportDataSource6.Value = Nothing
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource6)
+        ReportDataSource7.Name = "DataSet1"
+        ReportDataSource7.Value = Nothing
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource7)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Netcell_Demo_v._4.Report1.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(50, 29)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -1991,31 +2029,31 @@ Partial Class Form1
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AllowUserToOrderColumns = True
-        DataGridViewCellStyle16.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle19
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle20
         Me.DataGridView1.ColumnHeadersHeight = 25
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.NacionalidadDataGridViewTextBoxColumn, Me.SexoDataGridViewTextBoxColumn, Me.LugarnacimientoDataGridViewTextBoxColumn, Me.FechanacimientoDataGridViewTextBoxColumn, Me.ProfesionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.FechaexpiracionDataGridViewTextBoxColumn, Me.NumeroplasticoDataGridViewTextBoxColumn, Me.NumerochipDataGridViewTextBoxColumn, Me.FotoDataGridViewImageColumn, Me.FirmaDataGridViewImageColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.cedula, Me.CedulaDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.NacionalidadDataGridViewTextBoxColumn, Me.SexoDataGridViewTextBoxColumn, Me.LugarnacimientoDataGridViewTextBoxColumn, Me.FechanacimientoDataGridViewTextBoxColumn, Me.ProfesionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.FechaexpiracionDataGridViewTextBoxColumn, Me.NumeroplasticoDataGridViewTextBoxColumn, Me.NumerochipDataGridViewTextBoxColumn, Me.FotoDataGridViewImageColumn, Me.FirmaDataGridViewImageColumn})
         Me.DataGridView1.DataSource = Me.BindingSource1
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.ControlDark
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.ControlDark
+        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle21
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.Control
@@ -2024,149 +2062,6 @@ Partial Class Form1
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(893, 260)
         Me.DataGridView1.TabIndex = 2
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdDataGridViewTextBoxColumn.Width = 43
-        '
-        'CedulaDataGridViewTextBoxColumn
-        '
-        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula"
-        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "Cédula"
-        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
-        Me.CedulaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CedulaDataGridViewTextBoxColumn.Visible = False
-        Me.CedulaDataGridViewTextBoxColumn.Width = 65
-        '
-        'NombresDataGridViewTextBoxColumn
-        '
-        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
-        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombres"
-        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
-        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombresDataGridViewTextBoxColumn.Visible = False
-        Me.NombresDataGridViewTextBoxColumn.Width = 74
-        '
-        'ApellidosDataGridViewTextBoxColumn
-        '
-        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
-        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ApellidosDataGridViewTextBoxColumn.Visible = False
-        Me.ApellidosDataGridViewTextBoxColumn.Width = 74
-        '
-        'NacionalidadDataGridViewTextBoxColumn
-        '
-        Me.NacionalidadDataGridViewTextBoxColumn.DataPropertyName = "nacionalidad"
-        Me.NacionalidadDataGridViewTextBoxColumn.HeaderText = "Nacionalidad"
-        Me.NacionalidadDataGridViewTextBoxColumn.Name = "NacionalidadDataGridViewTextBoxColumn"
-        Me.NacionalidadDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NacionalidadDataGridViewTextBoxColumn.Visible = False
-        Me.NacionalidadDataGridViewTextBoxColumn.Width = 94
-        '
-        'SexoDataGridViewTextBoxColumn
-        '
-        Me.SexoDataGridViewTextBoxColumn.DataPropertyName = "sexo"
-        Me.SexoDataGridViewTextBoxColumn.HeaderText = "Sexo"
-        Me.SexoDataGridViewTextBoxColumn.Name = "SexoDataGridViewTextBoxColumn"
-        Me.SexoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.SexoDataGridViewTextBoxColumn.Visible = False
-        Me.SexoDataGridViewTextBoxColumn.Width = 56
-        '
-        'LugarnacimientoDataGridViewTextBoxColumn
-        '
-        Me.LugarnacimientoDataGridViewTextBoxColumn.DataPropertyName = "lugar_nacimiento"
-        Me.LugarnacimientoDataGridViewTextBoxColumn.HeaderText = "Lugar de nacimiento"
-        Me.LugarnacimientoDataGridViewTextBoxColumn.Name = "LugarnacimientoDataGridViewTextBoxColumn"
-        Me.LugarnacimientoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.LugarnacimientoDataGridViewTextBoxColumn.Visible = False
-        Me.LugarnacimientoDataGridViewTextBoxColumn.Width = 128
-        '
-        'FechanacimientoDataGridViewTextBoxColumn
-        '
-        Me.FechanacimientoDataGridViewTextBoxColumn.DataPropertyName = "fecha_nacimiento"
-        Me.FechanacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha de nacimiento"
-        Me.FechanacimientoDataGridViewTextBoxColumn.Name = "FechanacimientoDataGridViewTextBoxColumn"
-        Me.FechanacimientoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.FechanacimientoDataGridViewTextBoxColumn.Visible = False
-        Me.FechanacimientoDataGridViewTextBoxColumn.Width = 131
-        '
-        'ProfesionDataGridViewTextBoxColumn
-        '
-        Me.ProfesionDataGridViewTextBoxColumn.DataPropertyName = "profesion"
-        Me.ProfesionDataGridViewTextBoxColumn.HeaderText = "Profesión"
-        Me.ProfesionDataGridViewTextBoxColumn.Name = "ProfesionDataGridViewTextBoxColumn"
-        Me.ProfesionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ProfesionDataGridViewTextBoxColumn.Visible = False
-        Me.ProfesionDataGridViewTextBoxColumn.Width = 76
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Télefono"
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TelefonoDataGridViewTextBoxColumn.Visible = False
-        Me.TelefonoDataGridViewTextBoxColumn.Width = 74
-        '
-        'DireccionDataGridViewTextBoxColumn
-        '
-        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
-        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Dirección"
-        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
-        Me.DireccionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DireccionDataGridViewTextBoxColumn.Visible = False
-        Me.DireccionDataGridViewTextBoxColumn.Width = 77
-        '
-        'FechaexpiracionDataGridViewTextBoxColumn
-        '
-        Me.FechaexpiracionDataGridViewTextBoxColumn.DataPropertyName = "fecha_expiracion"
-        Me.FechaexpiracionDataGridViewTextBoxColumn.HeaderText = "Fecha de exppiración"
-        Me.FechaexpiracionDataGridViewTextBoxColumn.Name = "FechaexpiracionDataGridViewTextBoxColumn"
-        Me.FechaexpiracionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.FechaexpiracionDataGridViewTextBoxColumn.Visible = False
-        Me.FechaexpiracionDataGridViewTextBoxColumn.Width = 134
-        '
-        'NumeroplasticoDataGridViewTextBoxColumn
-        '
-        Me.NumeroplasticoDataGridViewTextBoxColumn.DataPropertyName = "numero_plastico"
-        Me.NumeroplasticoDataGridViewTextBoxColumn.HeaderText = "Número de plástico"
-        Me.NumeroplasticoDataGridViewTextBoxColumn.Name = "NumeroplasticoDataGridViewTextBoxColumn"
-        Me.NumeroplasticoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NumeroplasticoDataGridViewTextBoxColumn.Visible = False
-        Me.NumeroplasticoDataGridViewTextBoxColumn.Width = 123
-        '
-        'NumerochipDataGridViewTextBoxColumn
-        '
-        Me.NumerochipDataGridViewTextBoxColumn.DataPropertyName = "numero_chip"
-        Me.NumerochipDataGridViewTextBoxColumn.HeaderText = "Número de chip"
-        Me.NumerochipDataGridViewTextBoxColumn.Name = "NumerochipDataGridViewTextBoxColumn"
-        Me.NumerochipDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NumerochipDataGridViewTextBoxColumn.Visible = False
-        Me.NumerochipDataGridViewTextBoxColumn.Width = 107
-        '
-        'FotoDataGridViewImageColumn
-        '
-        Me.FotoDataGridViewImageColumn.DataPropertyName = "foto"
-        Me.FotoDataGridViewImageColumn.HeaderText = "foto"
-        Me.FotoDataGridViewImageColumn.Name = "FotoDataGridViewImageColumn"
-        Me.FotoDataGridViewImageColumn.ReadOnly = True
-        Me.FotoDataGridViewImageColumn.Visible = False
-        Me.FotoDataGridViewImageColumn.Width = 31
-        '
-        'FirmaDataGridViewImageColumn
-        '
-        Me.FirmaDataGridViewImageColumn.DataPropertyName = "firma"
-        Me.FirmaDataGridViewImageColumn.HeaderText = "firma"
-        Me.FirmaDataGridViewImageColumn.Name = "FirmaDataGridViewImageColumn"
-        Me.FirmaDataGridViewImageColumn.ReadOnly = True
-        Me.FirmaDataGridViewImageColumn.Visible = False
-        Me.FirmaDataGridViewImageColumn.Width = 35
         '
         'BindingSource1
         '
@@ -2390,8 +2285,8 @@ Partial Class Form1
         Me.Imprimir_ventanas.Panel2.Controls.Add(Me.txt_nombres)
         Me.Imprimir_ventanas.Panel2.Controls.Add(Me.txt_cedula)
         Me.Imprimir_ventanas.Panel2.Controls.Add(Me.Label81)
-        Me.Imprimir_ventanas.Size = New System.Drawing.Size(113, 498)
-        Me.Imprimir_ventanas.SplitterDistance = 123
+        Me.Imprimir_ventanas.Size = New System.Drawing.Size(113, 100)
+        Me.Imprimir_ventanas.SplitterDistance = 88
         Me.Imprimir_ventanas.TabIndex = 77
         '
         'a13
@@ -2882,6 +2777,10 @@ Partial Class Form1
         '
         Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel12)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Panel9)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Panel10)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Panel11)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Panel13)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 205)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
@@ -2942,6 +2841,222 @@ Partial Class Form1
         Me.Label76.TabIndex = 60
         Me.Label76.Text = "Marjorie Valdiviezo"
         '
+        'Panel9
+        '
+        Me.Panel9.Controls.Add(Me.PictureBox18)
+        Me.Panel9.Controls.Add(Me.Label65)
+        Me.Panel9.Controls.Add(Me.Label66)
+        Me.Panel9.Controls.Add(Me.Label67)
+        Me.Panel9.Location = New System.Drawing.Point(3, 74)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(226, 65)
+        Me.Panel9.TabIndex = 209
+        '
+        'PictureBox18
+        '
+        Me.PictureBox18.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.Foto
+        Me.PictureBox18.Location = New System.Drawing.Point(18, 6)
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.Size = New System.Drawing.Size(45, 55)
+        Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox18.TabIndex = 59
+        Me.PictureBox18.TabStop = False
+        '
+        'Label65
+        '
+        Me.Label65.AutoSize = True
+        Me.Label65.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label65.ForeColor = System.Drawing.Color.DimGray
+        Me.Label65.Location = New System.Drawing.Point(67, 44)
+        Me.Label65.Name = "Label65"
+        Me.Label65.Size = New System.Drawing.Size(96, 13)
+        Me.Label65.TabIndex = 62
+        Me.Label65.Text = "21/08/2012  15:34"
+        '
+        'Label66
+        '
+        Me.Label66.AutoSize = True
+        Me.Label66.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label66.ForeColor = System.Drawing.Color.DimGray
+        Me.Label66.Location = New System.Drawing.Point(65, 22)
+        Me.Label66.Name = "Label66"
+        Me.Label66.Size = New System.Drawing.Size(89, 20)
+        Me.Label66.TabIndex = 61
+        Me.Label66.Text = "0919078097"
+        '
+        'Label67
+        '
+        Me.Label67.AutoSize = True
+        Me.Label67.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label67.ForeColor = System.Drawing.Color.Black
+        Me.Label67.Location = New System.Drawing.Point(65, 4)
+        Me.Label67.Name = "Label67"
+        Me.Label67.Size = New System.Drawing.Size(128, 17)
+        Me.Label67.TabIndex = 60
+        Me.Label67.Text = "Marjorie Valdiviezo"
+        '
+        'Panel10
+        '
+        Me.Panel10.Controls.Add(Me.PictureBox19)
+        Me.Panel10.Controls.Add(Me.Label68)
+        Me.Panel10.Controls.Add(Me.Label69)
+        Me.Panel10.Controls.Add(Me.Label70)
+        Me.Panel10.Location = New System.Drawing.Point(3, 145)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(226, 65)
+        Me.Panel10.TabIndex = 210
+        '
+        'PictureBox19
+        '
+        Me.PictureBox19.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.Foto
+        Me.PictureBox19.Location = New System.Drawing.Point(18, 6)
+        Me.PictureBox19.Name = "PictureBox19"
+        Me.PictureBox19.Size = New System.Drawing.Size(45, 55)
+        Me.PictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox19.TabIndex = 59
+        Me.PictureBox19.TabStop = False
+        '
+        'Label68
+        '
+        Me.Label68.AutoSize = True
+        Me.Label68.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label68.ForeColor = System.Drawing.Color.DimGray
+        Me.Label68.Location = New System.Drawing.Point(67, 44)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(96, 13)
+        Me.Label68.TabIndex = 62
+        Me.Label68.Text = "21/08/2012  15:34"
+        '
+        'Label69
+        '
+        Me.Label69.AutoSize = True
+        Me.Label69.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label69.ForeColor = System.Drawing.Color.DimGray
+        Me.Label69.Location = New System.Drawing.Point(65, 22)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(89, 20)
+        Me.Label69.TabIndex = 61
+        Me.Label69.Text = "0919078097"
+        '
+        'Label70
+        '
+        Me.Label70.AutoSize = True
+        Me.Label70.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label70.ForeColor = System.Drawing.Color.Black
+        Me.Label70.Location = New System.Drawing.Point(65, 4)
+        Me.Label70.Name = "Label70"
+        Me.Label70.Size = New System.Drawing.Size(128, 17)
+        Me.Label70.TabIndex = 60
+        Me.Label70.Text = "Marjorie Valdiviezo"
+        '
+        'Panel11
+        '
+        Me.Panel11.Controls.Add(Me.PictureBox20)
+        Me.Panel11.Controls.Add(Me.Label71)
+        Me.Panel11.Controls.Add(Me.Label72)
+        Me.Panel11.Controls.Add(Me.Label73)
+        Me.Panel11.Location = New System.Drawing.Point(3, 216)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(226, 65)
+        Me.Panel11.TabIndex = 211
+        '
+        'PictureBox20
+        '
+        Me.PictureBox20.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.Foto
+        Me.PictureBox20.Location = New System.Drawing.Point(18, 6)
+        Me.PictureBox20.Name = "PictureBox20"
+        Me.PictureBox20.Size = New System.Drawing.Size(45, 55)
+        Me.PictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox20.TabIndex = 59
+        Me.PictureBox20.TabStop = False
+        '
+        'Label71
+        '
+        Me.Label71.AutoSize = True
+        Me.Label71.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label71.ForeColor = System.Drawing.Color.DimGray
+        Me.Label71.Location = New System.Drawing.Point(67, 44)
+        Me.Label71.Name = "Label71"
+        Me.Label71.Size = New System.Drawing.Size(96, 13)
+        Me.Label71.TabIndex = 62
+        Me.Label71.Text = "21/08/2012  15:34"
+        '
+        'Label72
+        '
+        Me.Label72.AutoSize = True
+        Me.Label72.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label72.ForeColor = System.Drawing.Color.DimGray
+        Me.Label72.Location = New System.Drawing.Point(65, 22)
+        Me.Label72.Name = "Label72"
+        Me.Label72.Size = New System.Drawing.Size(89, 20)
+        Me.Label72.TabIndex = 61
+        Me.Label72.Text = "0919078097"
+        '
+        'Label73
+        '
+        Me.Label73.AutoSize = True
+        Me.Label73.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label73.ForeColor = System.Drawing.Color.Black
+        Me.Label73.Location = New System.Drawing.Point(65, 4)
+        Me.Label73.Name = "Label73"
+        Me.Label73.Size = New System.Drawing.Size(128, 17)
+        Me.Label73.TabIndex = 60
+        Me.Label73.Text = "Marjorie Valdiviezo"
+        '
+        'Panel13
+        '
+        Me.Panel13.Controls.Add(Me.PictureBox22)
+        Me.Panel13.Controls.Add(Me.Label77)
+        Me.Panel13.Controls.Add(Me.Label78)
+        Me.Panel13.Controls.Add(Me.Label79)
+        Me.Panel13.Location = New System.Drawing.Point(3, 287)
+        Me.Panel13.Name = "Panel13"
+        Me.Panel13.Size = New System.Drawing.Size(226, 65)
+        Me.Panel13.TabIndex = 212
+        '
+        'PictureBox22
+        '
+        Me.PictureBox22.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.Foto
+        Me.PictureBox22.Location = New System.Drawing.Point(18, 6)
+        Me.PictureBox22.Name = "PictureBox22"
+        Me.PictureBox22.Size = New System.Drawing.Size(45, 55)
+        Me.PictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox22.TabIndex = 59
+        Me.PictureBox22.TabStop = False
+        '
+        'Label77
+        '
+        Me.Label77.AutoSize = True
+        Me.Label77.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label77.ForeColor = System.Drawing.Color.DimGray
+        Me.Label77.Location = New System.Drawing.Point(67, 44)
+        Me.Label77.Name = "Label77"
+        Me.Label77.Size = New System.Drawing.Size(96, 13)
+        Me.Label77.TabIndex = 62
+        Me.Label77.Text = "21/08/2012  15:34"
+        '
+        'Label78
+        '
+        Me.Label78.AutoSize = True
+        Me.Label78.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label78.ForeColor = System.Drawing.Color.DimGray
+        Me.Label78.Location = New System.Drawing.Point(65, 22)
+        Me.Label78.Name = "Label78"
+        Me.Label78.Size = New System.Drawing.Size(89, 20)
+        Me.Label78.TabIndex = 61
+        Me.Label78.Text = "0919078097"
+        '
+        'Label79
+        '
+        Me.Label79.AutoSize = True
+        Me.Label79.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label79.ForeColor = System.Drawing.Color.Black
+        Me.Label79.Location = New System.Drawing.Point(65, 4)
+        Me.Label79.Name = "Label79"
+        Me.Label79.Size = New System.Drawing.Size(128, 17)
+        Me.Label79.TabIndex = 60
+        Me.Label79.Text = "Marjorie Valdiviezo"
+        '
         'Panel8
         '
         Me.Panel8.Controls.Add(Me.Button8)
@@ -2960,6 +3075,16 @@ Partial Class Form1
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(249, 205)
         Me.Panel8.TabIndex = 1
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(207, 177)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(38, 24)
+        Me.Button8.TabIndex = 60
+        Me.Button8.Text = "Button8"
+        Me.Button8.UseVisualStyleBackColor = True
+        Me.Button8.Visible = False
         '
         'Button4
         '
@@ -3084,6 +3209,7 @@ Partial Class Form1
         '
         'Panel4
         '
+        Me.Panel4.Controls.Add(Me.Reporte_interno)
         Me.Panel4.Controls.Add(Me.FlowLayoutPanel3)
         Me.Panel4.Controls.Add(Me.imprimir)
         Me.Panel4.Controls.Add(Me.AxGrFingerXCtrl1)
@@ -3104,11 +3230,10 @@ Partial Class Form1
         '
         Me.FlowLayoutPanel3.Controls.Add(Me.Button9)
         Me.FlowLayoutPanel3.Controls.Add(Me.Button10)
-        Me.FlowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.FlowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel3.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel3.Location = New System.Drawing.Point(847, 0)
         Me.FlowLayoutPanel3.Name = "FlowLayoutPanel3"
-        Me.FlowLayoutPanel3.Size = New System.Drawing.Size(935, 26)
+        Me.FlowLayoutPanel3.Size = New System.Drawing.Size(88, 26)
         Me.FlowLayoutPanel3.TabIndex = 210
         '
         'Button9
@@ -3116,7 +3241,7 @@ Partial Class Form1
         Me.Button9.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(911, 3)
+        Me.Button9.Location = New System.Drawing.Point(64, 3)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(21, 22)
         Me.Button9.TabIndex = 60
@@ -3128,7 +3253,7 @@ Partial Class Form1
         Me.Button10.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(884, 3)
+        Me.Button10.Location = New System.Drawing.Point(37, 3)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(21, 22)
         Me.Button10.TabIndex = 61
@@ -3307,14 +3432,227 @@ Partial Class Form1
         'PrintDocument1
         '
         '
-        'Button8
+        'IdDataGridViewTextBoxColumn
         '
-        Me.Button8.Location = New System.Drawing.Point(207, 177)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(38, 24)
-        Me.Button8.TabIndex = 60
-        Me.Button8.Text = "Button8"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdDataGridViewTextBoxColumn.Width = 43
+        '
+        'cedula
+        '
+        Me.cedula.DataPropertyName = "cedula"
+        Me.cedula.HeaderText = "cedula"
+        Me.cedula.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.cedula.Name = "cedula"
+        Me.cedula.ReadOnly = True
+        '
+        'CedulaDataGridViewTextBoxColumn
+        '
+        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "Cédula"
+        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
+        Me.CedulaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CedulaDataGridViewTextBoxColumn.Visible = False
+        Me.CedulaDataGridViewTextBoxColumn.Width = 65
+        '
+        'NombresDataGridViewTextBoxColumn
+        '
+        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
+        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombres"
+        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
+        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombresDataGridViewTextBoxColumn.Visible = False
+        Me.NombresDataGridViewTextBoxColumn.Width = 74
+        '
+        'ApellidosDataGridViewTextBoxColumn
+        '
+        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ApellidosDataGridViewTextBoxColumn.Visible = False
+        Me.ApellidosDataGridViewTextBoxColumn.Width = 74
+        '
+        'NacionalidadDataGridViewTextBoxColumn
+        '
+        Me.NacionalidadDataGridViewTextBoxColumn.DataPropertyName = "nacionalidad"
+        Me.NacionalidadDataGridViewTextBoxColumn.HeaderText = "Nacionalidad"
+        Me.NacionalidadDataGridViewTextBoxColumn.Name = "NacionalidadDataGridViewTextBoxColumn"
+        Me.NacionalidadDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NacionalidadDataGridViewTextBoxColumn.Visible = False
+        Me.NacionalidadDataGridViewTextBoxColumn.Width = 94
+        '
+        'SexoDataGridViewTextBoxColumn
+        '
+        Me.SexoDataGridViewTextBoxColumn.DataPropertyName = "sexo"
+        Me.SexoDataGridViewTextBoxColumn.HeaderText = "Sexo"
+        Me.SexoDataGridViewTextBoxColumn.Name = "SexoDataGridViewTextBoxColumn"
+        Me.SexoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SexoDataGridViewTextBoxColumn.Visible = False
+        Me.SexoDataGridViewTextBoxColumn.Width = 56
+        '
+        'LugarnacimientoDataGridViewTextBoxColumn
+        '
+        Me.LugarnacimientoDataGridViewTextBoxColumn.DataPropertyName = "lugar_nacimiento"
+        Me.LugarnacimientoDataGridViewTextBoxColumn.HeaderText = "Lugar de nacimiento"
+        Me.LugarnacimientoDataGridViewTextBoxColumn.Name = "LugarnacimientoDataGridViewTextBoxColumn"
+        Me.LugarnacimientoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.LugarnacimientoDataGridViewTextBoxColumn.Visible = False
+        Me.LugarnacimientoDataGridViewTextBoxColumn.Width = 128
+        '
+        'FechanacimientoDataGridViewTextBoxColumn
+        '
+        Me.FechanacimientoDataGridViewTextBoxColumn.DataPropertyName = "fecha_nacimiento"
+        Me.FechanacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha de nacimiento"
+        Me.FechanacimientoDataGridViewTextBoxColumn.Name = "FechanacimientoDataGridViewTextBoxColumn"
+        Me.FechanacimientoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FechanacimientoDataGridViewTextBoxColumn.Visible = False
+        Me.FechanacimientoDataGridViewTextBoxColumn.Width = 131
+        '
+        'ProfesionDataGridViewTextBoxColumn
+        '
+        Me.ProfesionDataGridViewTextBoxColumn.DataPropertyName = "profesion"
+        Me.ProfesionDataGridViewTextBoxColumn.HeaderText = "Profesión"
+        Me.ProfesionDataGridViewTextBoxColumn.Name = "ProfesionDataGridViewTextBoxColumn"
+        Me.ProfesionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ProfesionDataGridViewTextBoxColumn.Visible = False
+        Me.ProfesionDataGridViewTextBoxColumn.Width = 76
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Télefono"
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TelefonoDataGridViewTextBoxColumn.Visible = False
+        Me.TelefonoDataGridViewTextBoxColumn.Width = 74
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Dirección"
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        Me.DireccionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DireccionDataGridViewTextBoxColumn.Visible = False
+        Me.DireccionDataGridViewTextBoxColumn.Width = 77
+        '
+        'FechaexpiracionDataGridViewTextBoxColumn
+        '
+        Me.FechaexpiracionDataGridViewTextBoxColumn.DataPropertyName = "fecha_expiracion"
+        Me.FechaexpiracionDataGridViewTextBoxColumn.HeaderText = "Fecha de exppiración"
+        Me.FechaexpiracionDataGridViewTextBoxColumn.Name = "FechaexpiracionDataGridViewTextBoxColumn"
+        Me.FechaexpiracionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FechaexpiracionDataGridViewTextBoxColumn.Visible = False
+        Me.FechaexpiracionDataGridViewTextBoxColumn.Width = 134
+        '
+        'NumeroplasticoDataGridViewTextBoxColumn
+        '
+        Me.NumeroplasticoDataGridViewTextBoxColumn.DataPropertyName = "numero_plastico"
+        Me.NumeroplasticoDataGridViewTextBoxColumn.HeaderText = "Número de plástico"
+        Me.NumeroplasticoDataGridViewTextBoxColumn.Name = "NumeroplasticoDataGridViewTextBoxColumn"
+        Me.NumeroplasticoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NumeroplasticoDataGridViewTextBoxColumn.Visible = False
+        Me.NumeroplasticoDataGridViewTextBoxColumn.Width = 123
+        '
+        'NumerochipDataGridViewTextBoxColumn
+        '
+        Me.NumerochipDataGridViewTextBoxColumn.DataPropertyName = "numero_chip"
+        Me.NumerochipDataGridViewTextBoxColumn.HeaderText = "Número de chip"
+        Me.NumerochipDataGridViewTextBoxColumn.Name = "NumerochipDataGridViewTextBoxColumn"
+        Me.NumerochipDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NumerochipDataGridViewTextBoxColumn.Visible = False
+        Me.NumerochipDataGridViewTextBoxColumn.Width = 107
+        '
+        'FotoDataGridViewImageColumn
+        '
+        Me.FotoDataGridViewImageColumn.DataPropertyName = "foto"
+        Me.FotoDataGridViewImageColumn.HeaderText = "foto"
+        Me.FotoDataGridViewImageColumn.Name = "FotoDataGridViewImageColumn"
+        Me.FotoDataGridViewImageColumn.ReadOnly = True
+        Me.FotoDataGridViewImageColumn.Visible = False
+        Me.FotoDataGridViewImageColumn.Width = 31
+        '
+        'FirmaDataGridViewImageColumn
+        '
+        Me.FirmaDataGridViewImageColumn.DataPropertyName = "firma"
+        Me.FirmaDataGridViewImageColumn.HeaderText = "firma"
+        Me.FirmaDataGridViewImageColumn.Name = "FirmaDataGridViewImageColumn"
+        Me.FirmaDataGridViewImageColumn.ReadOnly = True
+        Me.FirmaDataGridViewImageColumn.Visible = False
+        Me.FirmaDataGridViewImageColumn.Width = 35
+        '
+        'Reporte_interno
+        '
+        Me.Reporte_interno.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Reporte_interno.Controls.Add(Me.Panel16)
+        Me.Reporte_interno.Controls.Add(Me.Panel19)
+        Me.Reporte_interno.Location = New System.Drawing.Point(131, 89)
+        Me.Reporte_interno.Name = "Reporte_interno"
+        Me.Reporte_interno.Size = New System.Drawing.Size(621, 337)
+        Me.Reporte_interno.TabIndex = 211
+        Me.Reporte_interno.Visible = False
+        '
+        'Panel16
+        '
+        Me.Panel16.BackColor = System.Drawing.Color.White
+        Me.Panel16.Controls.Add(Me.ReportViewer2)
+        Me.Panel16.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel16.Location = New System.Drawing.Point(0, 72)
+        Me.Panel16.Name = "Panel16"
+        Me.Panel16.Padding = New System.Windows.Forms.Padding(10, 0, 15, 5)
+        Me.Panel16.Size = New System.Drawing.Size(621, 265)
+        Me.Panel16.TabIndex = 64
+        '
+        'Panel19
+        '
+        Me.Panel19.BackColor = System.Drawing.Color.White
+        Me.Panel19.Controls.Add(Me.Label96)
+        Me.Panel19.Controls.Add(Me.Button15)
+        Me.Panel19.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel19.Location = New System.Drawing.Point(0, 0)
+        Me.Panel19.Name = "Panel19"
+        Me.Panel19.Size = New System.Drawing.Size(621, 72)
+        Me.Panel19.TabIndex = 63
+        '
+        'Label96
+        '
+        Me.Label96.AutoSize = True
+        Me.Label96.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label96.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label96.Location = New System.Drawing.Point(60, 32)
+        Me.Label96.Name = "Label96"
+        Me.Label96.Size = New System.Drawing.Size(177, 25)
+        Me.Label96.TabIndex = 59
+        Me.Label96.Text = "REPORTE /  Interno"
+        '
+        'Button15
+        '
+        Me.Button15.BackColor = System.Drawing.Color.Transparent
+        Me.Button15.FlatAppearance.BorderSize = 0
+        Me.Button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button15.ForeColor = System.Drawing.Color.Transparent
+        Me.Button15.Image = Global.Netcell_Demo_v._4.My.Resources.Resources.arrow
+        Me.Button15.Location = New System.Drawing.Point(4, 22)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(50, 45)
+        Me.Button15.TabIndex = 0
+        Me.Button15.UseVisualStyleBackColor = False
+        '
+        'ReportViewer2
+        '
+        Me.ReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource8.Name = "DataSet2"
+        ReportDataSource8.Value = Me.BindingSource1
+        Me.ReportViewer2.LocalReport.DataSources.Add(ReportDataSource8)
+        Me.ReportViewer2.LocalReport.ReportEmbeddedResource = "Netcell_Demo_v._4.Report1.rdlc"
+        Me.ReportViewer2.Location = New System.Drawing.Point(10, 0)
+        Me.ReportViewer2.Name = "ReportViewer2"
+        Me.ReportViewer2.Size = New System.Drawing.Size(596, 260)
+        Me.ReportViewer2.TabIndex = 0
         '
         'Form1
         '
@@ -3328,7 +3666,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Footer)
         Me.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.DoubleBuffered = True
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Netcell  ID v.4"
@@ -3393,6 +3730,18 @@ Partial Class Form1
         Me.Panel12.ResumeLayout(False)
         Me.Panel12.PerformLayout()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel9.ResumeLayout(False)
+        Me.Panel9.PerformLayout()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel10.PerformLayout()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel11.PerformLayout()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel13.ResumeLayout(False)
+        Me.Panel13.PerformLayout()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3412,6 +3761,10 @@ Partial Class Form1
         Me.Panel17.ResumeLayout(False)
         Me.Panel15.ResumeLayout(False)
         Me.Panel15.PerformLayout()
+        Me.Reporte_interno.ResumeLayout(False)
+        Me.Panel16.ResumeLayout(False)
+        Me.Panel19.ResumeLayout(False)
+        Me.Panel19.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -3646,7 +3999,33 @@ Partial Class Form1
     Friend WithEvents Label94 As System.Windows.Forms.Label
     Friend WithEvents Label95 As System.Windows.Forms.Label
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
+    Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
+    Friend WithEvents Button11 As System.Windows.Forms.Button
+    Friend WithEvents PageSetupDialog1 As System.Windows.Forms.PageSetupDialog
+    Friend WithEvents Button8 As System.Windows.Forms.Button
+    Friend WithEvents Panel9 As System.Windows.Forms.Panel
+    Friend WithEvents PictureBox18 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label65 As System.Windows.Forms.Label
+    Friend WithEvents Label66 As System.Windows.Forms.Label
+    Friend WithEvents Label67 As System.Windows.Forms.Label
+    Friend WithEvents Panel10 As System.Windows.Forms.Panel
+    Friend WithEvents PictureBox19 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label68 As System.Windows.Forms.Label
+    Friend WithEvents Label69 As System.Windows.Forms.Label
+    Friend WithEvents Label70 As System.Windows.Forms.Label
+    Friend WithEvents Panel11 As System.Windows.Forms.Panel
+    Friend WithEvents PictureBox20 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label71 As System.Windows.Forms.Label
+    Friend WithEvents Label72 As System.Windows.Forms.Label
+    Friend WithEvents Label73 As System.Windows.Forms.Label
+    Friend WithEvents Panel13 As System.Windows.Forms.Panel
+    Friend WithEvents PictureBox22 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label77 As System.Windows.Forms.Label
+    Friend WithEvents Label78 As System.Windows.Forms.Label
+    Friend WithEvents Label79 As System.Windows.Forms.Label
     Friend WithEvents IdDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cedula As System.Windows.Forms.DataGridViewLinkColumn
     Friend WithEvents CedulaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NombresDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ApellidosDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -3662,10 +4041,11 @@ Partial Class Form1
     Friend WithEvents NumerochipDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents FotoDataGridViewImageColumn As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents FirmaDataGridViewImageColumn As System.Windows.Forms.DataGridViewImageColumn
-    Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
-    Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
-    Friend WithEvents Button11 As System.Windows.Forms.Button
-    Friend WithEvents PageSetupDialog1 As System.Windows.Forms.PageSetupDialog
-    Friend WithEvents Button8 As System.Windows.Forms.Button
+    Friend WithEvents Reporte_interno As System.Windows.Forms.Panel
+    Friend WithEvents Panel16 As System.Windows.Forms.Panel
+    Friend WithEvents ReportViewer2 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents Panel19 As System.Windows.Forms.Panel
+    Friend WithEvents Label96 As System.Windows.Forms.Label
+    Friend WithEvents Button15 As System.Windows.Forms.Button
 
 End Class

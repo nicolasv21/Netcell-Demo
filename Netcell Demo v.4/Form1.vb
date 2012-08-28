@@ -23,7 +23,7 @@ Public Class Form1
     Dim myUtil As Util
     Dim hbitmap As IntPtr
     Dim tableiniatilize As Boolean = False
-    Dim huellagemalto() As Byte
+    Dim huellagemalto() As Byte = New Byte() {0}
     Dim messageText As String = String.Empty
     Dim icaoAuthentityResult As IcaoAuthentityResult = icaoAuthentityResult.PassedAll
     Dim firstName As String = String.Empty
@@ -112,7 +112,7 @@ Public Class Form1
         fail.Visible = False     ' Ventana de error de chip id.
         Report.Visible = False     ' Ventana de Reporte.
         imprimir.Visible = False
-
+        Reporte_interno.Visible = False
         ventana_regresar = ventana_actual
 
         Ventana.Visible = True
@@ -168,6 +168,11 @@ Public Class Form1
                 lbl_footer_2.Visible = False
             End If
             If Ventana.Name = "imprimir" Then
+                botones(True, "REGRESAR", True, "CERRAR")
+                lbl_footer_1.Visible = False
+                lbl_footer_2.Visible = False
+            End If
+            If Ventana.Name = "Reporte_interno" Then
                 botones(True, "REGRESAR", True, "CERRAR")
                 lbl_footer_1.Visible = False
                 lbl_footer_2.Visible = False
@@ -348,10 +353,10 @@ Public Class Form1
                     End Using
                 End If
                 If (Not fingerIcao Is Nothing) Then
-                    hbitmap = WSQ_library_native_methods.CreateBMPFromWSQByteArray(fingerIcao, fingerIcao.Length)
-                    Me.d_huella.Image = Bitmap.FromHbitmap(hbitmap)
-                    Dim image2 As Image = Me.d_huella.Image
-                    image2.Save("c:\NETCELL\huella.bmp", System.Drawing.Imaging.ImageFormat.Bmp)
+                    ' hbitmap = WSQ_library_native_methods.CreateBMPFromWSQByteArray(fingerIcao, fingerIcao.Length)
+                    '  Me.d_huella.Image = Bitmap.FromHbitmap(hbitmap)
+                    ' Dim image2 As Image = Me.d_huella.Image
+                    ' image2.Save("c:\NETCELL\huella.bmp", System.Drawing.Imaging.ImageFormat.Bmp)
                     extraer = True
                     iden = False
                     Dim resolution As Integer
@@ -459,6 +464,7 @@ Public Class Form1
         activar_biometrico()
         Me.ReportViewer1.RefreshReport()
         tabla_settings()
+        Me.ReportViewer2.RefreshReport()
     End Sub
     Private Sub otiIcao1_OnFileBlockProcessed()
         Application.DoEvents()
@@ -628,12 +634,9 @@ Public Class Form1
             objConn = New SQLiteConnection(CONNECTION_STR)
             objConn.Open()
             objCommand = objConn.CreateCommand()
-
-
             objCommand.CommandText = "INSERT INTO cedulas (cedula, nombres , apellidos,nacionalidad,sexo,lugar_nacimiento,fecha_nacimiento,profesion,telefono,direccion,fecha_expiracion,numero_plastico,numero_chip,foto,firma,huella) VALUES ('" & d_cedula.Text & "','" & d_nombres.Text & "','" & d_apellidos.Text & "','" & d_nacionalidad.Text & "','" & d_sexo.Text & "','" & d_lugar_nac.Text & "','" & d_fecha_nac.Text & "','" & d_profesion.Text & "','" & d_telefono.Text & "','" & d_direccion.Text & "','" & d_fecha_expiracion.Text & "','" & d_numero_plastico.Text & "','" & d_numero_chip.Text & "',@photo,@firma,@huella);"
             objCommand.Parameters.Add("@photo", DbType.Binary, 20).Value = photo
-
-            If (huellagemalto.Length > 0) Then
+            If (huellagemalto.Length > 1) Then
                 objCommand.Parameters.Add("@huella", DbType.Binary, 20).Value = huellagemalto
             Else
                 objCommand.Parameters.Add("@huella", DbType.Binary, 20).Value = fingerIcao
@@ -755,7 +758,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button2_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        abrir(Report)
+        abrir(Reporte_interno)
     End Sub
 
     Private Sub btn_4_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_4.Click
@@ -1284,5 +1287,9 @@ Public Class Form1
 
     Private Sub Label74_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label74.Click
 
+    End Sub
+
+    Private Sub Button15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button15.Click
+        abrir(Report)
     End Sub
 End Class
